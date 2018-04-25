@@ -1,0 +1,46 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_primary"
+    tools:context="id.duglegir.jagosholat.View.MainActivityChild.KompasFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="27dp"
+            android:src="@drawable/ic_country_kompas"
+            android:layout_marginRight="@dimen/dimen_primary"/>
+
+        <TextView
+            android:id="@+id/idTvCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:text=" Country"
+            android:textColor="@color/textColorBlack"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cantainer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:gravity="center"
+        android:layout_marginVertical="@dimen/dimen_primary">
+    </RelativeLayout>
+
+</LinearLayout>

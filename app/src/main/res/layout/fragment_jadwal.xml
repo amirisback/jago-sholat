@@ -1,0 +1,129 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.duglegir.jagosholat.View.MainActivityChild.JadwalFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mendatang"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_view_sholat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            tools:hint="@string/sholat_shubuh"
+            android:textSize="50sp"
+            android:textColor="@color/textColorBlack"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/countDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            tools:hint="Hitung Mundur"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Background_JadwalList_Odd_0">
+
+            <TextView
+                style="@style/jadwalSholat"
+                android:text="@string/sholat_shubuh" />
+
+            <TextView
+                android:id="@+id/txt_waktu_shubuh"
+                style="@style/jadwalWaktu"
+                android:background="@color/Background_JadwalList_Odd_1"
+                tools:hint="waktu" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Background_JadwalList_Event_0">
+
+            <TextView
+                style="@style/jadwalSholat"
+                android:text="@string/sholat_dzuhur"
+/>
+            <TextView
+                android:id="@+id/txt_waktu_dzuhur"
+                style="@style/jadwalWaktu"
+                tools:hint="waktu"
+                android:background="@color/Background_JadwalList_Event_1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Background_JadwalList_Odd_0">
+
+            <TextView
+                style="@style/jadwalSholat"
+                android:text="@string/sholat_ashar" />
+
+            <TextView
+                android:id="@+id/txt_waktu_ashar"
+                style="@style/jadwalWaktu"
+                tools:hint="waktu"
+                android:background="@color/Background_JadwalList_Odd_1"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Background_JadwalList_Event_0">
+
+            <TextView
+                style="@style/jadwalSholat"
+                android:text="@string/sholat_maghrib"
+/>
+
+            <TextView
+                android:id="@+id/txt_waktu_maghrib"
+                style="@style/jadwalWaktu"
+                android:background="@color/Background_JadwalList_Event_1"
+                tools:hint="waktu" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Background_JadwalList_Odd_0">
+
+            <TextView
+                style="@style/jadwalSholat"
+                android:text="@string/sholat_isya" />
+            <TextView
+                android:id="@+id/txt_waktu_isya"
+                style="@style/jadwalWaktu"
+                tools:hint="waktu"
+                android:background="@color/Background_JadwalList_Odd_1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

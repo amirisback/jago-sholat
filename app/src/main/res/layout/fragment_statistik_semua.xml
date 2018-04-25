@@ -1,0 +1,46 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="id.duglegir.jagosholat.Controller.StatistikFragmentContent.StatistikSemuaFragment">
+
+    <LinearLayout
+        android:id="@+id/list_title"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:background="@color/Judul_statistik">
+        <TextView
+            android:id="@+id/txt_stat_semua_tanggal"
+            style="@style/content_title_listView_stat_semua"
+            android:text="Tanggal"/>
+        <TextView
+            android:id="@+id/txt_stat_semua_waktu"
+            style="@style/content_title_listView_stat_semua"
+            android:text="Waktu"/>
+        <TextView
+            android:id="@+id/txt_stat_semua_shalat"
+            style="@style/content_title_listView_stat_semua"
+            android:text="Shalat"/>
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listViewStatistik"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/list_title"/>
+
+    <!-- Empty View -->
+    <RelativeLayout
+        android:id="@+id/empty_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <include layout="@layout/content_statistik_empty"/>
+
+    </RelativeLayout>
+</RelativeLayout>

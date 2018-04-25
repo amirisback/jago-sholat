@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorPrimaryDark">#004D40</color> <!-- StatusBar -->
+    <!--<color name="colorPrimaryDark">#008975</color> &lt;!&ndash; StatusBar &ndash;&gt;-->
+    <!--<color name="colorPrimary">#00BF9A</color>  &lt;!&ndash; 900 &ndash;&gt;-->
+    <!--<color name="colorPrimary">#008975</color>  &lt;!&ndash; 900 &ndash;&gt;-->
+    <color name="colorPrimary">#00695C</color>  <!-- 900 -->
+    <color name="colorAccent">#00BF9A</color>
+    <color name="background">#E0F2F1</color>
+
+    <color name="textColorBlack">#000000</color>
+    <color name="textColorWhite">#FFFFFF</color>
+    <color name="textColorButton">#FFFFFF</color>
+    <color name="Background_Root">#ECEFF1</color>
+
+    <color name="Background_Primary">@color/colorPrimary</color>
+    <color name="Background_Secondary">@color/colorAccent</color>
+    <color name="Background_Button">#E6008975</color>
+    <color name="Background_ContentTutorial">#4DB6AC</color>
+    <color name="Background_SplashScreen">#F5F5F5</color>
+    <color name="Background_JadwalList_Odd_0">#00796B</color>
+    <color name="Background_JadwalList_Odd_1">#00695C</color>
+    <color name="Background_JadwalList_Event_0">#E600796B</color>
+    <color name="Background_JadwalList_Event_1">#A600695C</color>
+
+    <color name="Bacground_Statistik_Harian">#558B2F</color>
+
+    <!--Color Icon TabLayout-->
+    <color name="IconUnselect">@color/textColorWhite</color>
+    <color name="IconSelect">@color/colorAccent</color>
+    <color name="Background_TabLayout">@color/Background_Primary</color>
+
+    <color name="Progress_Red">#F44336</color>
+    <color name="Progress_Yellow">#FFC107</color>
+    <color name="Progress_Green">#1B5E20</color>
+    <color name="Judul_statistik">#26A69A</color>
+    <color name="background_material_dark">#ffffff</color>
+
+
+</resources>

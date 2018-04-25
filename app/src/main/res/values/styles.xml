@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="jenisShalat">
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="arabShalat">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="latinShalat" >
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">12dp</item>
+    </style>
+
+    <style name="terjemahShalat" >
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">12dp</item>
+    </style>
+
+    <style name="jadwalSholat">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="jadwalWaktu">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">125dp</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="content_title_listView_stat_semua">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+    </style>
+
+
+
+    <style name="content_listView_stat_semua">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/textColorBlack</item>
+    </style>
+</resources>

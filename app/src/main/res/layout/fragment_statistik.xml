@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="id.duglegir.jagosholat.View.MainActivityChild.StatistikFragment"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginVertical="@dimen/dimen_primary"
+        android:paddingHorizontal="@dimen/dimen_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_statHarian"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_submit"
+            android:text="@string/stat_harian"
+            android:textColor="@color/textColorButton" />
+
+        <Button
+            android:id="@+id/btn_statGrafik"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_submit"
+            android:text="@string/grafik"
+            android:textColor="@color/textColorButton" />
+
+        <Button
+            android:id="@+id/btn_statSemua"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border_submit"
+            android:text="@string/stat_semua"
+            android:textColor="@color/textColorButton" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:paddingHorizontal="@dimen/dimen_primary"
+        android:id="@+id/fragStatistik"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+</LinearLayout>

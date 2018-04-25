@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen_primary"
+    tools:context="id.duglegir.jagosholat.View.MainActivityChild.CatatanFragment">
+
+    <TextView
+        android:id="@+id/txt_bismilah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bismillah"
+        android:textSize="22sp"
+        android:textStyle="italic"
+        android:textColor="@color/textColorBlack"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+    <!--Tengah-->
+    <LinearLayout
+        android:id="@+id/contain_isi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/border_button"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/txt_bismilah"
+        android:paddingVertical="32dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/txt_tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorButton"
+            android:textSize="20sp"
+            tools:text="Tanggal" />
+
+        <TextView
+            android:id="@+id/txt_sholat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            tools:text="Sholat Dzuhur"
+            android:textColor="@color/textColorButton"
+            android:textSize="37sp"/>
+
+    </LinearLayout>
+
+    <!--Bawah-->
+    <LinearLayout
+        android:layout_below="@id/contain_isi"
+        android:id="@+id/hadist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/txt_hadist_arab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/hadis_arab_0"
+            android:textColor="@color/textColorBlack"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_hadist_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/dimen_primary"
+            android:text="@string/hadis_text_0"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginBottom="40dp" />
+    </LinearLayout>
+
+    <!--Button-->
+    <Button
+        android:id="@+id/btn_simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/simpan"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/textColorButton"
+        android:background="@drawable/border_submit"
+        android:textSize="20sp" />
+
+</RelativeLayout>

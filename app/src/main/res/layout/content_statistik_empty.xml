@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * 
+ * FrogoBox Inc License
+ * =========================================
+ * 
+ * Copyright (C)       
+ * All rights reserved
+ * 
+ * Name     : Muhammad Faisal Amir
+ * E-mail   : f.miir117@gmail.com
+ * Line     : bullbee117
+ * Phone    : 081357108568
+ * Majors   : D3 Teknik Informatika 2016
+ * Campus   : Telkom University
+ * 
+ * id.amirisback.frogobox
+ * 
+ -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/empty_view"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Belum ada catatan ibadah"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan mencatat ibadah shalat"/>
+
+</LinearLayout>

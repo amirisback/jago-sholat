@@ -1,0 +1,206 @@
+<resources>
+    <string name="app_name">Jago Sholat</string>
+    <string name="bismillah">بِسْــــــــــــــــــمِ اللهِ الرَّحْمَنِ الرَّحِيْم</string>
+    <string name="mendatang">Mendatang</string>
+    <string name="team">Dug Legir</string>
+    <string name="simpan">Catat</string>
+
+    <!-- === String untuk Fragment Feature === -->
+    <string name="btn_tutor_wudhu">Tata Cara Wudhu</string>
+    <string name="btn_niat_sholat">Niat Shalat</string>
+    <string name="btn_tutor_sholat">Tata Cara Shalat</string>
+    <string name="btn_doa">Doa Setelah Shalat</string>
+    <!-- ===================================== -->
+
+    <!-- === String untuk Fragment Statiskik === -->
+    <string name="grafik">Grafik</string>
+    <string name="stat_harian">Harian</string>
+    <string name="stat_semua">Semua Data</string>
+    <!-- ======================================= -->
+
+    <!-- === String Untuk Pemberian Nama ViewPager / Title === -->
+    <string name="menu_catatan">Catatan</string>
+    <string name="menu_feature">Fitur</string>
+    <string name="menu_kompas">Kompas</string>
+    <string name="menu_statistik">Statistik</string>
+    <string name="menu_jadwal">Jadwal</string>
+    <!-- ===================================================== -->
+
+    <!-- === String Untuk Hadist di layout Fragment_Catatan === -->
+    <string name="hadis_arab_0">الْعَهْدُ الَّذِى بَيْنَنَا وَبَيْنَهُمُ الصَّلاَةُ فَمَنْ تَرَكَهَا فَقَدْ كَف</string>
+    <string name="hadis_text_0">“Perjanjian antara kami dan mereka (orang kafir) adalah shalat. Barangsiapa meninggalkannya maka dia telah kafir.” (HR. Ahmad, Tirmidzi, An Nasa’i, Ibnu Majah.Dikatakan shohih oleh Syaikh Al Albani. Lihat Misykatul Mashobih no. 574)</string>
+
+    <string name="hadis_arab_1">مَنْ صَلَّى الْبَرْدَيْنِ دَخَلَ الْجَنَّة</string>
+    <string name="hadis_text_1">“Barangsiapa yang mengerjakan shalat bardain (yaitu shalat shubuh dan ashar) maka dia akan masuk surga.” (HR. Bukhari no. 574 dan Muslim no. 635)</string>
+
+    <string name="hadis_arab_2">بَيْنَ العَبْدِ وَبَيْنَ الكُفْرِ وَالإِيْمَانِ الصَّلَاةُ فَإِذَا تَرَكَهَا فَقَدْ أَشْرَكَ</string>
+    <string name="hadis_text_2">“Pemisah Antara seorang hamba dengan kekufuran dan keimanan adalah shalat. Apabila dia meninggalkannya, maka dia melakukan kesyirikan.” (HR. Ath Thobariy dengan sanad shohih.)</string>
+
+    <string name="hadis_arab_3">عَنْ بُرَيْدَةَ رض قَالَ: سَمِعْتُ رَسُوْلَ اللهِ ص يَقُوْلُ: اَلْعَهْدُ الَّذِى بَيْنَنَا وَ بَيْنَهُمُ الصَّلاَةُ. فَمَنْ تَرَكَهَا فَقَدْ كَفَرَ. الخمسة، فى نيل الاوطار 1: 343</string>
+    <string name="hadis_text_3">Dari Buraidah RA, ia berkata : Saya mendengar Rasulullah SAW bersabda, “Perjanjian antara kami dan mereka adalah shalat, maka barangsiapa meninggalkannya, maka sungguh ia telah kufur”. [HR. Khamsah, dalam Nailul Authar juz 1, hal. 343]</string>
+
+    <string name="hadis_arab_4">الصَّلَوَاتُ الْخَمْسُ وَالْجُمُعَةُ إِلَى الْجُمُعَةِ وَرَمَضَانُ إِلَى رَمَضَانَ مُكَفِّرَاتٌ مَا بَيْنَهُنَّ إِذَا اجْتَنَبَ الْكَبَائِرَ</string>
+    <string name="hadis_text_4">“Di antara shalat yang lima waktu, di antara Jumat yang satu dan Jumat lainnya, di antara Ramadhan yang satu dan Ramadhan lainnya, itu akan menghapuskan dosa di antara keduanya selama seseorang menjauhi dosa-dosa besar.” (HR. Muslim no. 233).</string>
+
+    <string name="hadis_arab_5">بَشِّرِ الْمَشَّائِينَ فِى الظُّلَمِ إِلَى الْمَسَاجِدِ بِالنُّورِ التَّامِّ يَوْمَ الْقِيَامَةَِ</string>
+    <string name="hadis_text_5">“Berilah kabar gembira bagi orang yang berjalan ke masjid dalam keadaan gelap bahwasanya kelak ia akan mendapatkan cahaya sempurna pada hari kiamat.” (HR. Abu Daud no. 561 dan Tirmidzi no. 223</string>
+    <!-- ====================================================== -->
+
+    <!-- === Waktu Sholat === -->
+    <string name="sholat_shubuh">Shubuh</string>
+    <string name="sholat_dzuhur">Dzuhur</string>
+    <string name="sholat_ashar">Ashar</string>
+    <string name="sholat_maghrib">Maghrib</string>
+    <string name="sholat_isya">Isya</string>
+
+    <string name="waktu_shubuh">04 : 39</string>
+    <string name="waktu_dzuhur">12 : 02</string>
+    <string name="waktu_ashar">15 : 09</string>
+    <string name="waktu_maghrib">18 : 06</string>
+    <string name="waktu_isya">19 : 16</string>
+    <!-- ==================== -->
+
+
+    <!-- === String Untuk Niat Sholat di Fragment_Feature_Niat === -->
+    <!-- Niat Sholat Shubuh -->
+    <string name="rakaat_shubuh">"#2 Raka'at"</string>
+    <string name="id_shubuh">Shalat Shubuh</string>
+    <string name="arab_shubuh">اُصَلِّيْ فَرْضَ الصُّبْحِ رَكْعَتَيْنِ مُسْتَقْبِلَ اْلقِبْلَةِ اَدَاءً لِلَّهِ تَعَالَى </string>
+    <string name="latin_shubuh">"Ushallii fardhal shubhi rak'ataini mustaqbilall qiblati adaa-an lillaahi ta'aala"</string>
+    <string name="terjemah_shubuh">"Artinya :
+        Saya niat melakukan shalat fardhu Shubuh 2 raka'at menghadap kiblat karena Allah Ta'ala"</string>
+    <!-- ================== -->
+
+    <!-- Niat Sholat Dzuhur -->
+    <string name="rakaat_dzuhur">"#4 Raka'at"</string>
+    <string name="id_dzuhur">Shalat Dzuhur</string>
+    <string name="arab_dzuhur">اُصَلِّى فَرْضَ الظُّهْرِاَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى</string>
+    <string name="latin_dzuhur">"Ushallii fardhodl dhuhri arba'a raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala"</string>
+    <string name="terjemah_dzuhur">"Artinya :
+        Saya niat melakukan shalat fardhu Dzuhur 4 raka'at menghadap kiblat karena Allah Ta'ala"</string>
+    <!-- ================== -->
+
+    <!-- Niat Sholat Ashar -->
+    <string name="rakaat_ashar">"#4 Raka'at"</string>
+    <string name="id_ashar">Shalat Ashar</string>
+    <string name="arab_ashar">اُصَلِّى فَرْضَ الْعَصْرِاَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى</string>
+    <string name="latin_ashar">"Ushallii fardhol 'ashri arba'a raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala"</string>
+    <string name="terjemah_ashar">"Artinya :
+        Saya niat melakukan shalat fardhu 'Ashar 4 raka'at menghadap kiblat karena Allah Ta'ala"</string>
+    <!-- ================= -->
+
+    <!-- Niat Sholat Maghrib -->
+    <string name="rakaat_maghrib">"#3 Raka'at"</string>
+    <string name="id_maghrib">Shalat Maghrib</string>
+    <string name="arab_maghrib">اُصَلِّى فَرْضَ الْمَغْرِبِ ثَلاَثَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى</string>
+    <string name="latin_maghrib">"Ushallii fardhol maghribi tsalaata raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala"</string>
+    <string name="terjemah_maghrib">"Artinya :
+        Saya niat melakukan shalat fardhu Maghrib 3 raka'at menghadap kiblat karena Allah Ta'ala"</string>
+    <!-- =================== -->
+
+    <!-- Niat Sholat Isya -->
+    <string name="rakaat_isya">"#4 Raka'at"</string>
+    <string name="id_isya">Shalat Isya</string>
+    <string name="arab_isya">اُصَلِّى فَرْضَ الْعِشَاءِ اَرْبَعَ رَكَعَاتٍ مُسْتَقْبِلَ الْقِبْلَةِ اَدَاءً ِللهِ تَعَالَى</string>
+    <string name="latin_isya">"Ushallii fardhol 'isyaa-i arba'a raka'aatim mustaqbilal qiblati adaa-an lillaahi ta'aala"</string>
+    <string name="terjemah_isya">"Artinya :
+        Saya niat melakukan shalat fardhu Isya 4 raka'at menghadap kiblat karena Allah Ta'ala"</string>
+    <!-- ================ -->
+
+    <!-- Niat Sholat Jumat -->
+    <string name="rakaat_jumat">#2 Rakaat</string>
+    <string name="id_jumat">"Shalat Jum'at"</string>
+    <string name="arab_jumat">اُصَلِّيْ فَرْضَ الجُمْعَةِ رَكْعَتَيْنِ مُسْتَقْبِلَ اْلقِبْلَةِ اَدَاءً مَاْمُوْمًا لِلَّهِ تَعَالَى</string>
+    <string name="latin_jumat">"Ushallii fardlol jum'ati rak'ataini mustaqbilal qiblati adaa-an ma-muuman lillaahi ta'aala."</string>
+    <string name="terjemah_jumat">"Artinya :
+        Saya niat melakukan shalat fardhu Jum'at 2 raka'at, menghadap kiblat sebagai ma'mum, karena Allah Ta'ala."</string>
+    <!-- ================= -->
+    <!-- ========================================================= -->
+
+
+    <!-- String Untuk Doa Setelah Sholat -->
+    <string name="setelah_shalat_arab1">َبِسْمِ اللهِ الرَّحْمَنِ الرَّحِيْمِ. اَلْحَمْدُ ِللهِ رَبِّ الْعَالَمِيْنَ. حَمْدًا يُوَافِىْ نِعَمَهُ وَيُكَافِئُ مَزِيْدَهُ. يَارَبَّنَالكَ الْحَمْدُ وَلَكَ الشُّكْرُ كَمَا يَنْبَغِىْ لِجَلاَلِ وَجْهِكَ وَعَظِيْمِ سُلْطَانِكَ
+</string>
+    <string name="setelah_shalat_latin1">"BISMILLAAHIRRAHMAANIRRAHIIM. ALHAMDU LILLAAHI RABBIL 'AALAMIIN. HAMDAY YU-WAAFII NI'AMAHUU WA YUKAAFI'U MAZIIDAH. YAA RABBANAA LAKALHAMDU WA LAKASY SYUKRU KA-MAA YAMBAGHIILIJALAALIWAJHIKA WA 'AZHIIMISUL-THAANIK."</string>
+    <string name="setelah_shalat_terjemah1">Dengan nama Allah Yang Maha Pengasih Lagi Maha Penyayang. Segala puji bagi Allah Tuhan Semesta Alam. Pujian yang sebanding dengan nikmat-nikmatNya dan menjamin tambahannya. Wahai Tuhan kami, bagi-Mu-lah segala puji, dan bagi-Mu-lah segalah syukur, sebagaimana layak bagi keluhuran zat-Mu dan keagungan kekuasaan-Mu.</string>
+    <!-- =============================== -->
+    <string name="setelah_shalat_arab2">اَللهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلى آلِ سَيِّدِنَا مُحَمَّدٍ. صَلاَةً تُنْجِيْنَابِهَا مِنْ جَمِيْعِ اْلاَهْوَالِ وَاْلآفَاتِ. وَتَقْضِىْ لَنَابِهَا جَمِيْعَ الْحَاجَاتِ.وَتُطَهِّرُنَا بِهَا مِنْ جَمِيْعِ السَّيِّئَاتِ. وَتَرْفَعُنَابِهَا عِنْدَكَ اَعْلَى الدَّرَجَاتِ. وَتُبَلِّغُنَا بِهَا اَقْصَى الْغَيَاتِ مِنْ جَمِيْعِ الْخَيْرَاتِ فِى الْحَيَاةِ وَبَعْدَ الْمَمَاتِ اِنَّهُ سَمِيْعٌ قَرِيْبٌ مُجِيْبُ الدَّعَوَاتِ وَيَاقَاضِىَ الْحَاجَات</string>
+    <string name="setelah_shalat_latin2">"ALLAAHUMMA SHALLIWASALLIM 'ALAA SAYYIDINAA MUHAMMADIW WA 'ALAA AALI SAYYIDINAA MUHAMMAD. SHALA ATAN TUN AJIHNAA BÍHAA MINJAMII'IL AHWAALI WAL AAFAAT. WA TAQDHII LANAA BIHAA JAMII'AL HAAJAAT. WA TUTHAHHIRUNAA BIHAA MIN JAMII'IS SAYYI'AAT. W ATARFA ' UN A A BIHAA 'INDAKA ' A'LADDARAJAAT. WA TUBALLIGHUNAA BIHAA AQSHAL GHAAYAATI MIN JAMII'IL KHAIRAATIFIL HAYAATIWA BA'DAL MAMAAT. INNAHU SAMII'UN QARIIBUM MUJIIBUD DA'AWAAT WAYAA QAADHIYAL HAAJAAT.
+"</string>
+    <string name="setelah_shalat_terjemah2">Wahai Allah, limpahkanlah rahmat dan kesejahteraan kepada penghulu kami, Nabi Muhammad dan keluarganya, yaitu rahmat yang dapat menyelamatkan kami dari segala ketakutan dan penyakit, yang dapat memenuhi segala kebutuhan kami, yang dapat mensucikan diri kami dari segala keburukan, yang dapat mengangkat derajat kami ke derajat tertinggi di sisi-Mu, dan dapat menyampaikan kami kepada tujuan maksimal dari segala kebaikan, baik semasa hidup maupun sesudah mati. Sesunggunya Dia (Allah) Maha Mendengar, Maha Dekat, lagi Maha Memperkenankan segala doa dan permohonan. Wahai Dzat yang Maha Memenuhi segala kebutuhan Hamba-Nya.</string>
+    //--------------
+    <string name="setelah_shalat_arab3">اَللهُمَّ اِنَّا نَسْئَلُكَ سَلاَمَةً فِى الدِّيْنِ وَالدُّنْيَا وَاْلآخِرَةِ وَعَافِيَةً فِى الْجَسَدِ وَصِحَّةً فِى الْبَدَنِ وَزِيَادَةً فِى الْعِلْمِ وَبَرَكَةً فِى الرِّزْقِ وَتَوْبَةً قَبْلَ الْمَوْتِ وَرَحْمَةً عِنْدَ الْمَوْتِ وَمَغْفِرَةً بَعْدَ الْمَوْتِ. اَللهُمَّ هَوِّنْ عَلَيْنَا فِىْ سَكَرَاتِ الْمَوْتِ وَالنَّجَاةَ مِنَ النَّارِ وَالْعَفْوَ عِنْدَ الْحِسَاب</string>
+    <string name="setelah_shalat_latin3">"ALLAAHUMMA INNAA NAS'ALUKA SALAAMATAN FTDDIINI WADDUN-YAA WAL AAKHIRAH. WA 'AAFIYA-TAN FIL JASADI WA SHIHHATAN FIL BADANI WA ZIYAADATAN FIL 'ILMI WA BARAKATAN FIRRIZQI WA TAUB ATAN QABLAL MAUT WA RAHM ATAN 'INDALMAUT WA MAGHFIRATAN BA'D AL MAUT. ALLAAHUMMA HAWWIN 'ALAINAA FII SAKARAATIL MAUT WAN NAJAATA MINAN NAARI WAL 'AFWA 'INDAL HISAAB.
+"</string>
+    <string name="setelah_shalat_terjemah3">Wahai Allah! Sesungguhnya kami memohon kepadaMu, kesejahteraan dalam agama, dunia dan akhirat, keafiatan jasad, kesehatan badan, tambahan ilmu, keberkahan rezeki, taubat sebelum datang maut, rahmat pada saat datang maut, dan ampunan setelah datang maut. Wahai Allah! Permudahkanlah kami dalam menghadapi sakaratul maut, (Berilah kami) keselamatan dari api neraka, dan ampunan pada saat dilaksanakan hisab.
+</string>
+    <!-- =============================== -->
+    <string name="setelah_shalat_arab4">اَللهُمَّ اِنَّا نَعُوْذُبِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَالْبُخْلِ وَالْهَرَمِ وَعَذَابِ الْقَبْرِ
+</string>
+    <string name="setelah_shalat_latin4">"ALLAAHUMMA INNAA NA'UUDZU BIKA MINAL 'AJZI WAL KASALI WAL BUKHLI WAL HARAMI WA 'ADZAABIL QABRI.
+"</string>
+    <string name="setelah_shalat_terjemah4">Wahai Allah! Sesungguhnya kami berlindung kepadaMu dari sifat lemah, malas, kikir, pikun dan dari azab kubur
+</string>
+    <!-- =============================== -->
+    <string name="setelah_shalat_arab5">اَللهُمَّ اِنَّا نَعُوْذُبِكَ مِنْ عِلْمٍ لاَيَنْفَعُ وَمِنْ قَلْبٍ لاَيَخْشَعُ وَمِنْ نَفْسٍ لاَتَشْبَعُ وَمِنْ دَعْوَةٍ لاَيُسْتَجَابُ لَهَا.
+</string>
+    <string name="setelah_shalat_latin5">"ALLAAHUMMAINNAA NA'UUDZU BIKA MIN 'ILMIN LAA YANFA' W AMIN QALBIN LAA YAKHSYA' W AMIN NAFSIN LAA TASYBA' WAMIN DA'WATIN LAA YUSTAJAABU LAHAA.
+"</string>
+    <string name="setelah_shalat_terjemah5">"Wahai Allah! Sesungguhnya kami berlindung kepadaMu dari ilmu yang tidak bermanfaat, dari hati yang tidak khusyu', dari jiwa yang tidak kenal puas, dan dari doa yanag tak terkabul.
+"</string>
+    <!-- =============================== -->
+    <string name="setelah_shalat_arab6">رَبَّنَااغْفِرْلَنَا ذُنُوْبَنَا وَلِوَالِدِيْنَا وَلِمَشَايِخِنَا وَلِمُعَلِّمِيْنَا وَلِمَنْ لَهُ حَقٌّ عَلَيْنَا وَلِمَنْ اَحَبَّ وَاَحْسَنَ اِلَيْنَا وَلِكَافَّةِ الْمُسْلِمِيْنَ اَجْمَعِيْنَ
+</string>
+    <string name="setelah_shalat_latin6">"RABBANAGH FIRLANAA DZUNUUBANAA WA LIWAA-LIDIINAA WALIMASYAAYIKHINAA WA LIMU'ALLI-MIENAA WA LIMAN LAHUU H AQQUN' ALAIN AA WA LIM AN AHABBA WA AHSANA ILAINAA WA LIKAAFFATIL MUS LIMUN A AJMA'IIN.
+"</string>
+    <string name="setelah_shalat_terjemah6">Wahai Tuhan Kami, ampunilah dosa-dosa kami, dosa-dosa orang tua kami, para sesepuh kami, para guru kami, orang-orang yang mempunyai hak atas kami, orang-orang yang cinta dan berbuat baik kepada kami, dan seluruh umat islam
+</string>
+    <!-- =============================== -->
+    <string name="setelah_shalat_arab7">رَبَّنَا تَقَبَّلْ مِنَّا اِنَّكَ اَنْتَ السَّمِيْعُ الْعَلِيْمُ وَتُبْ عَلَيْنَا اِنَّكَ اَنْتَ التَّوَّابُ الرَّحِيْمُ
+</string>
+    <string name="setelah_shalat_latin7">"RABBANAA TAQABBAL MINNAA INNAKA ANTAS SAMII'UL 'ALIIM, WA TUB 'ALAINAA INNAKA ANTAT TA WWA ABUR RAHIIM.
+"</string>
+    <string name="setelah_shalat_terjemah7">Wahai Tuhan kami, perkenankanlah (permohonan) dari kami, sesungguhnya Engkau Maha Mendengar Lagi Maha Mengetahui. Dan terimalah taubat kami, sesungguhnya Engkau Maha Menerima Taubat lagi Maha Penyayang.
+</string>
+    <!-- =============================== -->
+    <string name="setelah_shalat_arab8">رَبَّنَا أَتِنَا فِى الدُّنْيَا حَسَنَةً وَفِي اْلأَخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ
+</string>
+    <string name="setelah_shalat_latin8">RABBANAA AATINAA FIDDUNNYAA HASANAH, WA FIL AAKHIRATI HASANAH, WAQINAA ‘ADZAA BAN NAAR.
+</string>
+    <string name="setelah_shalat_terjemah8">Ya Tuhan kami, berilah kami kebaikan hidup di dunia dan kebaikan hidup di akhirat, dan jagalah kami dari siksa api neraka.
+</string>
+    <!-- =============================== -->
+    <string name="setelah_shalat_arab9">وَصَلَّى اللهُ عَلى سَيِّدِنَا مُحَمَّدٍ وَعَلى آلِهِ وَصَحْبِهِ وَسَلَّمَ وَالْحَمْدُ ِللهِ رَبِّ الْعَالَمِيْنَ
+</string>
+    <string name="setelah_shalat_latin9">"WASHALLALLAAHU 'ALAA SAYYIDINAA MUHAMMA-DIN WA'ALAA AALIHIWA SHAHBIHIIWA SALLAM, WAL HAMDU LILLAAHIRABBIL 'AALAMIIN.
+"</string>
+    <string name="setelah_shalat_terjemah9">Semoga Allah memberikan rahmat dan kesejahteraan kepada penghulu kami, Nabi Muhammad, keluarga dan sahabatnya dan segala puji bagi Allah, Tuhan Semesta Alam
+</string>
+
+
+    <!-- === String untuk Tentang Kami === -->
+    <string name="aboutUs_pengertian">Jago sholat adalah aplikasi berbasis mobile android yang fungsinya
+    untuk memudahkan umat muslim untuk mencatat ibadah mereka agar mereka tau apakah sholatnya semakin
+    baik atau semakin tidak baik</string>
+    <string name="aboutUs_apasih">apa sih jago sholat?</string>
+    <string name="aboutUs_made1">Made with Android Studio 3.0.3</string>
+    <string name="aboutUs_made2">Using SQLite for database</string>
+    <string name="aboutUs_nama_ican">M. Ikhsan R</string>
+    <string name="aboutUs_nama_amir">M. Faisal Amir</string>
+    <string name="aboutUs_nama_bryan">Bryan Rafsanzani</string>
+    <string name="aboutUs_version">2018 | JagoSholat V1.0</string>
+    <string name="aboutUs_saran1">Ada Saran?</string>
+    <string name="aboutUs_saran2">Kirim saran kamu ke</string>
+    <string name="aboutUs_saran3">DugLegir@gmail.com</string>
+    <!--=================================-->
+
+    <!-- === String untuk Statistik=== -->
+    <string name="statistik_tanggal">Tanggal</string>
+    <string name="statistik_waktu">Waktu</string>
+    <string name="statistik_shalat">Shalat</string>
+    <!--=================================-->
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- =============================== -->
+
+</resources>

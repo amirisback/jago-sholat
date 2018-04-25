@@ -1,0 +1,54 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="id.duglegir.jagosholat.Controller.StatistikFragmentContent.StatistikHarianFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/Judul_statistik"
+        android:minHeight="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statistik Shalat Hari Ini"
+            android:textSize="20dp"
+            android:textColor="@color/textColorWhite" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/stat_progressBar"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_below="@id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/Progress_Red"
+        android:progress="50"/>
+
+    <ListView
+        android:scrollbars="none"
+        android:id="@+id/listViewStatistik"
+        android:layout_width="match_parent"
+        android:layout_below="@id/stat_progressBar"
+        android:layout_height="match_parent"/>
+
+    <!-- Empty View -->
+    <RelativeLayout
+        android:id="@+id/empty_views"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <include layout="@layout/content_statistik_empty"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
