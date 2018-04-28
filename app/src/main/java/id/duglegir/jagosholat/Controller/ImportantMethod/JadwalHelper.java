@@ -1,5 +1,6 @@
 package id.duglegir.jagosholat.Controller.ImportantMethod;
 
+import android.annotation.SuppressLint;
 import android.os.CountDownTimer;
 import android.widget.TextView;
 
@@ -7,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
+
+import id.duglegir.jagosholat.R;
 
 /**
  * Created by Faisal Amir on 18/03/2018.
@@ -143,10 +146,11 @@ public class JadwalHelper {
                     TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
                     TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millisUntilFinished)),
                     TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished))));
+
             }
 
             public void onFinish() {
-                mTextView.setText("Saatnya Shalat");
+                mTextView.setText(R.string.jadwal_helper_saatnya_shalat);
             }
 
         }.start();

@@ -1,4 +1,4 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -10,9 +10,6 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="horizontal">
@@ -29,18 +26,27 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left"
             android:layout_marginLeft="5dp"
-            android:text=" Country"
+            tools:hint="country"
             android:textColor="@color/textColorBlack"
             android:textSize="20sp"
             android:textStyle="bold"/>
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/cantainer_layout"
+        android:id="@+id/container_layout"
         android:layout_width="match_parent"
         android:layout_height="260dp"
         android:gravity="center"
+        android:layout_centerInParent="true"
         android:layout_marginVertical="@dimen/dimen_primary">
     </RelativeLayout>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/txt_no_internet"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:hint="@string/kompas_no_internet"/>
+
+</RelativeLayout>

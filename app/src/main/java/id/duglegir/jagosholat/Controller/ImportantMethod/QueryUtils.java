@@ -1,10 +1,8 @@
 package id.duglegir.jagosholat.Controller.ImportantMethod;
 
 import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureObject.DoaShalat;

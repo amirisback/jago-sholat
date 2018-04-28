@@ -6,11 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-        <com.github.mikephil.charting.charts.LineChart
-            android:layout_marginTop="@dimen/fab_margin"
+    <com.github.mikephil.charting.charts.LineChart
             android:id="@+id/stat_chart"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </com.github.mikephil.charting.charts.LineChart>
+            android:layout_height="match_parent"/>
 
 </LinearLayout>

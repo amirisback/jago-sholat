@@ -38,23 +38,30 @@ import id.duglegir.jagosholat.R;
 
 public class KompasFragment extends Fragment implements SensorListener {
 
-    private RelativeLayout direcCantainer;
-    Context context;
-    SensorManager sensorManager;
-    static final int sensor = SensorManager.SENSOR_ORIENTATION;
+    // ---------------------------------------------------------------------------------------------
+    // Deklarasi Class
     private KompasRose kompasRose;
-    View view;
-
-    KompasGPSTracker gps;
-    double latitude,longitude;
-    private String add;
-    TextView CountryName;
-    int Distance;
-    double Qlati=21.42243;
-    double Qlongi=39.82624;
-    public  static double degree;
+    private KompasGPSTracker gps;
+    // ---------------------------------------------------------------------------------------------
+    // Deklarasi XML Layout
+    private RelativeLayout direcCantainer;
+    private View view;
+    private TextView CountryName;
+    // ---------------------------------------------------------------------------------------------
+    private Context context;
+    private SensorManager sensorManager;
+    private static final int sensor = SensorManager.SENSOR_ORIENTATION;
+    // ---------------------------------------------------------------------------------------------
+    private double latitude,longitude;
+    private double Qlati = 21.42243;
+    private double Qlongi = 39.82624;
+    public static double degree;
+    // ---------------------------------------------------------------------------------------------
     private String location_string;
+    private String add;
+    private int Distance;
     String result = "";
+    // ---------------------------------------------------------------------------------------------
 
     public KompasFragment() {
         // Required empty public constructor
@@ -66,20 +73,22 @@ public class KompasFragment extends Fragment implements SensorListener {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_kompas, container, false);
 
-//        getSupportActionBar ().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM); ini Bukan Activity
+        // -----------------------------------------------------------------------------------------
         context = getActivity();
+        direcCantainer = (RelativeLayout)rootView.findViewById(R.id.container_layout);
+        kompasRose = new KompasRose(context);
+        sensorManager = (SensorManager)getContext().getSystemService(context.SENSOR_SERVICE);
+        AsyncCallWS2 task = new AsyncCallWS2();
+        // -----------------------------------------------------------------------------------------
         IntializeView(rootView);
         getlocation();
-        AsyncCallWS2 task=new AsyncCallWS2();
         task.execute();
-//        getAddress(latitude, longitude);
-        Distance=getDistanceBetween();
-        degree=bearing(latitude, longitude, Qlati, Qlongi);
-        direcCantainer = (RelativeLayout)rootView.findViewById(R.id.cantainer_layout);
-        kompasRose = new KompasRose(context);
+        // -----------------------------------------------------------------------------------------
+        Distance = getDistanceBetween();
+        degree = bearing(latitude, longitude, Qlati, Qlongi);
         direcCantainer.addView(kompasRose);
         kompasRose.invalidate();
-        sensorManager = (SensorManager)getContext().getSystemService(context.SENSOR_SERVICE);
+        // -----------------------------------------------------------------------------------------
 
         return rootView;
     }
@@ -152,29 +161,30 @@ public class KompasFragment extends Fragment implements SensorListener {
 
     private int getDistanceBetween() {
 
+        // -----------------------------------------------------------------------------------------
         double latA = Qlati;
         double lngA = Qlongi;
         double latB = latitude;
         double lngB = longitude;
-
+        // -----------------------------------------------------------------------------------------
         Location locationA = new Location("point A");
-        locationA.setLatitude(latA);
-
-        locationA.setLongitude(lngA);
         Location locationB = new Location("point B");
+        // -----------------------------------------------------------------------------------------
+        locationA.setLatitude(latA);
+        locationA.setLongitude(lngA);
         locationB.setLatitude(latB);
         locationB.setLongitude(lngB);
+        // -----------------------------------------------------------------------------------------
         float distance = locationA.distanceTo(locationB);
         int dis = (int) distance;
+        // -----------------------------------------------------------------------------------------
 
         return dis;
     }
 
 
     private void IntializeView(View root) {
-
-        CountryName=(TextView)root.findViewById(R.id.idTvCountryName);
-
+        CountryName = (TextView)root.findViewById(R.id.idTvCountryName);
     }
 
     protected double bearing(double startLat, double startLng, double endLat, double endLng){
@@ -183,12 +193,10 @@ public class KompasFragment extends Fragment implements SensorListener {
         double latitude1 = Math.toRadians(startLat);
         double latitude2 = Math.toRadians(endLat);
         double longDiff= Math.toRadians(longitude2 - longitude1);
-        double y= Math.sin(longDiff)* Math.cos(latitude2);
-        double x= Math.cos(latitude1)* Math.sin(latitude2)- Math.sin(latitude1)* Math.cos(latitude2)* Math.cos(longDiff);
+        double y = Math.sin(longDiff)* Math.cos(latitude2);
+        double x = Math.cos(latitude1)* Math.sin(latitude2)- Math.sin(latitude1)* Math.cos(latitude2)* Math.cos(longDiff);
 
         return (Math.toDegrees(Math.atan2(y, x))+360)%360;
-
-
     }
 
     public void getAddress(double lat, double lng) {
@@ -196,24 +204,20 @@ public class KompasFragment extends Fragment implements SensorListener {
         try {
             List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
             Address obj = addresses.get (0);
-//            add = obj.getAddressLine (0);
-            add =obj.getLocality();
+
+            add = obj.getLocality();
             add = add + ", " + obj.getCountryName();
             add = obj.getCountryName();
-
             Log.v("IGA", "Address" + add);
-
             CountryName.setText(add);
-            // TennisAppActivity.showDialog(add);
-        } catch (IOException e) {
 
+        } catch (IOException e) {
             e.printStackTrace();
-//            Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
             Toast.makeText(context, "You have no Internet connection", Toast.LENGTH_SHORT).show();
         }
+
         catch(IndexOutOfBoundsException e){
             e.printStackTrace();
-//            Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT).show();
             Toast.makeText(context, "You have no Internet connection", Toast.LENGTH_SHORT).show();
         }
     }
@@ -221,14 +225,10 @@ public class KompasFragment extends Fragment implements SensorListener {
 
     private void getlocation() {
         gps = new KompasGPSTracker(context);
-
         // check if GPS enabled
         if (gps.canGetLocation()) {
-
             latitude = gps.getLatitude();
             longitude = gps.getLongitude();
-
-
         } else {
             // can't get location
             // GPS or Network is not enabled
@@ -239,17 +239,8 @@ public class KompasFragment extends Fragment implements SensorListener {
 
     @Override
     public void onResume() {
-//        AdRequest adRequest = new AdRequest.Builder()
-//                .addTestDevice(Utils.Interstitial)
-//                .build();
-//        mInterstitialAd.loadAd(adRequest);
-//        if (mInterstitialAd.isLoaded()) {
-//            mInterstitialAd.show();
-//        }
-
         super.onResume();
         sensorManager.registerListener(this, sensor);
-//        ((TextView)view.findViewById(R.id.idTvCountryName)).setText(new GregorianCalendar().getTimeZone().getDisplayName());
     }
 
     @Override

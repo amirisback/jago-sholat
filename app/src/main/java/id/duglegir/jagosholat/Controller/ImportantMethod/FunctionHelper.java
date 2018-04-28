@@ -1,7 +1,6 @@
 package id.duglegir.jagosholat.Controller.ImportantMethod;
 
 import android.widget.TextView;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Random;

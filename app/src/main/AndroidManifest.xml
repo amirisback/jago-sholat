@@ -66,6 +66,7 @@
             android:authorities="id.duglegir.jagosholat"
             android:exported="false"/>
 
+        <service android:name=".Controller.KompasFragmentContent.KompasGPSTracker" />
     </application>
 
 </manifest>

@@ -36,13 +36,12 @@ public class DataProvider extends ContentProvider {
     // ---------------------------------------------------------------------------------------------
     // Deklarasi Kebutuhan Variable
     // Setiap Table memiliki alamat sendiri
+    public static final String LOG_TAG = DataProvider.class.getSimpleName();
     private static final int DATA = 100; // Projection All
     private static final int DATA_ID = 101; // Projection ID
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
     private DatabaseHelper mDbHelper;
     // ---------------------------------------------------------------------------------------------
-
-    public static final String LOG_TAG = DataProvider.class.getSimpleName();
 
     // ---------------------------------------------------------------------------------------------
     static {
@@ -58,13 +57,10 @@ public class DataProvider extends ContentProvider {
     }
 
     @Override
-    public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection,
-                        @Nullable String[] selectionArgs, @Nullable String sortOrder) {
-            // Get readable database
-            SQLiteDatabase database = mDbHelper.getReadableDatabase();
+    public Cursor query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
 
-            // This cursor will hold the result of the query
-            Cursor cursor;
+            SQLiteDatabase database = mDbHelper.getReadableDatabase(); // Get readable database
+            Cursor cursor; // This cursor will hold the result of the query
 
             // Figure out if the URI matcher can match the URI to a specific code
             int match = sUriMatcher.match(uri);
@@ -86,7 +82,6 @@ public class DataProvider extends ContentProvider {
             }
 
             cursor.setNotificationUri(getContext().getContentResolver(), uri);
-
             return cursor;
     }
 
@@ -106,13 +101,8 @@ public class DataProvider extends ContentProvider {
         }
     }
 
-
-
-
-
     private Uri insertData(Uri uri, ContentValues values){
         SQLiteDatabase database = mDbHelper.getWritableDatabase();
-
         long id = database.insert(DataEntry.TABLE_NAME, null , values);
 
         if (id ==-1){
@@ -149,8 +139,8 @@ public class DataProvider extends ContentProvider {
         if (values.size() == 0){
             return 0;
         }
-        SQLiteDatabase database = mDbHelper.getWritableDatabase();
 
+        SQLiteDatabase database = mDbHelper.getWritableDatabase();
         int rowUpdated = database.update(DataEntry.TABLE_NAME, values, selection, selectionArgs);
 
         if (rowUpdated != 0) {
@@ -158,8 +148,6 @@ public class DataProvider extends ContentProvider {
         }
 
         return rowUpdated;
-
     }
-
 
 }

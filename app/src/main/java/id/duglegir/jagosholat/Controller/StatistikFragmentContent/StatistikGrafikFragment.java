@@ -24,10 +24,12 @@ import id.duglegir.jagosholat.View.MainActivityChild.StatistikFragment;
 
 public class StatistikGrafikFragment extends Fragment {
 
+    // ---------------------------------------------------------------------------------------------
     private LineChart mChart;
-
+    // ---------------------------------------------------------------------------------------------
     private FunctionHelper functionHelper = new FunctionHelper();
     private DataOperation crud = new DataOperation();
+    // ---------------------------------------------------------------------------------------------
 
     public StatistikGrafikFragment() {
         // Required empty public constructor
@@ -39,22 +41,22 @@ public class StatistikGrafikFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.fragment_statistik_grafik, container, false);
-        mChart = (LineChart) rootView.findViewById(R.id.stat_chart);
 
+        // -----------------------------------------------------------------------------------------
+        mChart = (LineChart) rootView.findViewById(R.id.stat_chart);
+        // -----------------------------------------------------------------------------------------
         ShowChart();
 
         return rootView;
-
     }
 
-
     public void ShowChart(){
-
+        // -----------------------------------------------------------------------------------------
         mChart.setDragEnabled(true);
         mChart.setScaleEnabled(false);
-
+        // -----------------------------------------------------------------------------------------
         ArrayList<Entry> yValues = new ArrayList<>();
-
+        // -----------------------------------------------------------------------------------------
         yValues.add(new Entry(0,4f));
         yValues.add(new Entry(1,10f));
         yValues.add(new Entry(2,2f));
@@ -62,29 +64,27 @@ public class StatistikGrafikFragment extends Fragment {
         yValues.add(new Entry(4,2f));
         yValues.add(new Entry(5,1f));
         yValues.add(new Entry(6,0f));
-
-        LineDataSet set1 = new LineDataSet(yValues, "Statistik");
-
-        set1.setFillAlpha(110);
-
-        set1.setColor(Color.BLACK);
-        set1.setLineWidth(3f);
-        set1.setValueTextSize(10f);
-        set1.setValueTextColor(Color.WHITE);
-        mChart.setBorderColor(Color.WHITE);
-
+        // -----------------------------------------------------------------------------------------
+        // -----------------------------------------------------------------------------------------
+        LineDataSet mLineDataSet = new LineDataSet(yValues, "Statistik");
+        // -----------------------------------------------------------------------------------------
+        mLineDataSet.setFillAlpha(50);
+        mLineDataSet.setColor(Color.BLACK);
+        mLineDataSet.setLineWidth(3f);
+        mLineDataSet.setValueTextSize(10f);
+        mLineDataSet.setValueTextColor(Color.BLACK);
+        mChart.setBorderColor(Color.GREEN);
+        // -----------------------------------------------------------------------------------------
+        // -----------------------------------------------------------------------------------------
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-        dataSets.add(set1);
-
+        dataSets.add(mLineDataSet);
+        // -----------------------------------------------------------------------------------------
         LineData data = new LineData(dataSets);
-
         mChart.setData(data);
-
+        // -----------------------------------------------------------------------------------------
         String[] months = new String[] {"Senin", "Selasa" ,"Rabu" , "Kamis" , "Jumat" , "Sabtu", "Minggu"};
         XAxis xAxis = mChart.getXAxis();
         xAxis.setValueFormatter( new StatistikFragment.MyXAxisValueFormatter(months));
-
+        // -----------------------------------------------------------------------------------------
     }
-
-
 }
