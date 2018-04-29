@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureAdapter;
+package id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import id.duglegir.jagosholat.R;
-import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureObject.NiatShalat;
+import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.NiatShalat;
 
 /**
  * Created by Bryan on 3/3/2018.

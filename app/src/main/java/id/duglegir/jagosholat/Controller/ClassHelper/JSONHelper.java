@@ -1,14 +1,14 @@
-package id.duglegir.jagosholat.Controller.ImportantMethod;
+package id.duglegir.jagosholat.Controller.ClassHelper;
 
 import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureObject.DoaShalat;
-import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureObject.NiatShalat;
+import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.DoaShalat;
+import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.NiatShalat;
 
-public class QueryUtils {
+public class JSONHelper {
 
     private static final String BASE_JSON_REPSONSE ="{\n" +
             "      \"niat_shalat\":[\n" +
@@ -104,7 +104,7 @@ public class QueryUtils {
             "      ]\n" +
             "}";
 
-    public QueryUtils() {
+    public JSONHelper() {
     }
 
     public static ArrayList<DoaShalat> extractDoaShalat(){
@@ -127,7 +127,7 @@ public class QueryUtils {
             }
 
         }catch (Exception e){
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e("JSONHelper", "Problem parsing the earthquake JSON results", e);
         }
 
         return arrayListDoaShalat;
@@ -156,7 +156,7 @@ public class QueryUtils {
             }
 
         }catch (Exception e){
-            Log.e("QueryUtils", "Problem parsing the earthquake JSON results", e);
+            Log.e("JSONHelper", "Problem parsing the earthquake JSON results", e);
         }
 
         return arrayListNiatShalat;

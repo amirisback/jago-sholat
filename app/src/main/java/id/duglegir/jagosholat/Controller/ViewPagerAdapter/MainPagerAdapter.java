@@ -1,14 +1,14 @@
-package id.duglegir.jagosholat.View.ViewPagerController;
+package id.duglegir.jagosholat.Controller.ViewPagerAdapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import id.duglegir.jagosholat.View.MainActivityChild.CatatanFragment;
-import id.duglegir.jagosholat.View.MainActivityChild.FeatureFragment;
-import id.duglegir.jagosholat.View.MainActivityChild.JadwalFragment;
-import id.duglegir.jagosholat.View.MainActivityChild.KompasFragment;
-import id.duglegir.jagosholat.View.MainActivityChild.StatistikFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.JadwalFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.CatatanFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.FeatureFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.KompasFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.StatistikFragment;
 
 /**
  * Created by Faisal Amir on 25/02/2018.

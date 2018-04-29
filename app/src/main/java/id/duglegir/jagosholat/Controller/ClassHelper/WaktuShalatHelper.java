@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.Controller.ImportantMethod;
+package id.duglegir.jagosholat.Controller.ClassHelper;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -14,7 +14,7 @@ import java.util.TimeZone;
  * All rights reserved
  * -----------------------------------------
  */
-public class WaktuShalat {
+public class WaktuShalatHelper {
     // ---------------------- Global Variables --------------------
     private int calcMethod; // caculation method
     private int asrJuristic; // Juristic method for Asr
@@ -59,7 +59,7 @@ public class WaktuShalat {
     private double[] prayerTimesCurrent;
     private int[] offsets;
 
-    public WaktuShalat(){
+    public WaktuShalatHelper(){
         this.setCalcMethod(0);
         this.setAsrJuristic(0);
         this.setDhuhrMinutes(0);

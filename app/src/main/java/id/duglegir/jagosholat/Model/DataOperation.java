@@ -30,14 +30,19 @@ public class DataOperation {
     public DataOperation() {
     }
 
-    // Variable projection ini gunanya untuk memilih column pada database --------------------------
+    // ---------------------------------------------------------------------------------------------
+    // Variable projection ini gunanya untuk memilih column pada database
     // Guna variable projection ini sama seperti * pada SQL
-    private String projection[] = {DataContract.DataEntry._ID,
-            DataContract.DataEntry.COLUMN_TANGGAL,
-            DataContract.DataEntry.COLUMN_SHALAT,
-            DataContract.DataEntry.COLUMN_WAKTU,
-            DataContract.DataEntry.COLUMN_STATUS
+    private String projection[] = {DataEntry._ID,
+            DataEntry.COLUMN_TANGGAL,
+            DataEntry.COLUMN_SHALAT,
+            DataEntry.COLUMN_WAKTU,
+            DataEntry.COLUMN_STATUS
     };
+
+
+
+
     // ---------------------------------------------------------------------------------------------
 
     private long result; // result ini untuk mendapatkan boolean dari insert data (true/false)
@@ -46,11 +51,11 @@ public class DataOperation {
     public boolean insertData(Context context, String id, String tanggal, String shalat, String waktu, String status) {
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put(DataContract.DataEntry._ID, id);
-        contentValues.put(DataContract.DataEntry.COLUMN_TANGGAL, tanggal);
-        contentValues.put(DataContract.DataEntry.COLUMN_SHALAT, shalat);
-        contentValues.put(DataContract.DataEntry.COLUMN_WAKTU, waktu);
-        contentValues.put(DataContract.DataEntry.COLUMN_STATUS, status);
+        contentValues.put(DataEntry._ID, id);
+        contentValues.put(DataEntry.COLUMN_TANGGAL, tanggal);
+        contentValues.put(DataEntry.COLUMN_SHALAT, shalat);
+        contentValues.put(DataEntry.COLUMN_WAKTU, waktu);
+        contentValues.put(DataEntry.COLUMN_STATUS, status);
 
         Uri resultUri = context.getContentResolver().insert(DataEntry.CONTENT_URI,contentValues);
 
@@ -119,6 +124,16 @@ public class DataOperation {
     }
     // ---------------------------------------------------------------------------------------------
 
+    public Cursor getSemuaTanggal(Context context){
+        String projectionTanggal[] = {"DISTINCT " + DataEntry.COLUMN_TANGGAL};
+        Cursor res = context.getContentResolver().query(
+            DataEntry.CONTENT_URI,
+            projectionTanggal,
+            null,
+            null,
+            null);
+        return res;
+    }
 
     public String[] getProjection() {
         return projection;

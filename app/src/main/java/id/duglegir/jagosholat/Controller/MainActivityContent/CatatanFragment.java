@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.MainActivityChild;
+package id.duglegir.jagosholat.Controller.MainActivityContent;
 
 import android.database.Cursor;
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 import java.util.Random;
 
-import id.duglegir.jagosholat.Controller.ImportantMethod.FunctionHelper;
-import id.duglegir.jagosholat.Controller.ImportantMethod.JadwalHelper;
+import id.duglegir.jagosholat.Controller.ClassHelper.FunctionHelper;
+import id.duglegir.jagosholat.Controller.ClassHelper.JadwalHelper;
 import id.duglegir.jagosholat.Model.DataOperation;
 import id.duglegir.jagosholat.R;
 
@@ -49,9 +49,15 @@ public class CatatanFragment extends Fragment {
 
     // Cek di dalam table belum ada data sama sekali -----------------------------------------------
     public boolean isEmptyRowTable() {
-        Cursor res = crud.getDataTanggalJenis(getContext(), isi_tanggal, isi_sholat);
-        int cek = res.getCount();
-        return cek == 0;
+        Cursor res = null;
+        try {
+            res = crud.getDataTanggalJenis(getContext(), isi_tanggal, isi_sholat);
+            int cek = res.getCount();
+            return cek == 0;
+        } finally {
+            res.close();
+        }
+        
     }
     // ---------------------------------------------------------------------------------------------
 
@@ -168,6 +174,7 @@ public class CatatanFragment extends Fragment {
 
         // Panggil method untuk mencatat -----------------------------------------------------------
         id_ibadah = "IDS" + functionHelper.getRandomChar();
+
         tampilanButtonSimpan(isi_sholat);
 
         btn_simpan.setOnClickListener(new View.OnClickListener() {

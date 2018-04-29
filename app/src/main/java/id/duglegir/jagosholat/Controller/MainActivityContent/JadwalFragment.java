@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.MainActivityChild;
+package id.duglegir.jagosholat.Controller.MainActivityContent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,8 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import id.duglegir.jagosholat.Controller.ImportantMethod.FunctionHelper;
-import id.duglegir.jagosholat.Controller.ImportantMethod.JadwalHelper;
+import id.duglegir.jagosholat.Controller.ClassHelper.FunctionHelper;
+import id.duglegir.jagosholat.Controller.ClassHelper.JadwalHelper;
 import id.duglegir.jagosholat.R;
 
 

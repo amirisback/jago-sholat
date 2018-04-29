@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.Controller.ImportantMethod.FunctionHelper;
+import id.duglegir.jagosholat.Controller.ClassHelper.FunctionHelper;
 import id.duglegir.jagosholat.Controller.StatistikFragmentContent.StatistikAdapter.StatistikHarianCursorAdapter;
 import id.duglegir.jagosholat.Controller.StatistikFragmentContent.StatistikObject.StatistikWord;
 import id.duglegir.jagosholat.Model.DataContract.DataEntry;

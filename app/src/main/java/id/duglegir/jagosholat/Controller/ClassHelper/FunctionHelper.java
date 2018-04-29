@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.Controller.ImportantMethod;
+package id.duglegir.jagosholat.Controller.ClassHelper;
 
 import android.widget.TextView;
 import java.text.SimpleDateFormat;
@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import id.duglegir.jagosholat.View.MainActivityChild.CatatanFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.CatatanFragment;
 
 /**
  * Created by Bryan Rafsanzani on 11/03/2018.
@@ -23,12 +23,9 @@ public class FunctionHelper {
     // ---------------------------------------------------------------------------------------------
 
     // Requirement Tanggal dan Waktu ---------------------------------------------------------------
-    private String dateToday;
     private Calendar currentTime;
-    private String outputStringTime;
-    private String nol_jam = "", nol_menit = "",nol_detik = "";
-    private int systemJam, systemMenit, systemDetik, sumWaktuDetik;
-    private String nilai_jam, nilai_menit, nilai_detik;
+    private String outputStringTime, dateToday, nilai_jam, nilai_menit, nilai_detik, nol_jam = "", nol_menit = "",nol_detik = "";
+    private int systemJam, systemMenit, systemDetik, sumWaktuDetik, systemYear;
     private final int jamKeDetik = 3600;
     private final int menitKeDetik = 60;
     private final int detikKeMili = 1000;
@@ -70,6 +67,7 @@ public class FunctionHelper {
     public void getPureSystemTime() {
         // Skala Waktu 24 Jam ----------------------------------------------------------------------
         Calendar cal = Calendar.getInstance();
+        systemYear = cal.get(Calendar.YEAR);
         systemJam = cal.get(Calendar.HOUR_OF_DAY);
         systemMenit = cal.get(Calendar.MINUTE);
         systemDetik = cal.get(Calendar.SECOND);
@@ -179,8 +177,8 @@ public class FunctionHelper {
         return systemMenit;
     }
 
-    public int getSystemDetik() {
-        return systemDetik;
+    public int getSystemYear(){
+        return systemYear;
     }
 
     public int getDetikKeMiliDetik() {

@@ -1,6 +1,5 @@
-package id.duglegir.jagosholat.Controller.ImportantMethod;
+package id.duglegir.jagosholat.Controller.ClassHelper;
 
-import android.annotation.SuppressLint;
 import android.os.CountDownTimer;
 import android.widget.TextView;
 
@@ -19,14 +18,14 @@ public class JadwalHelper {
 
     // Deklarasi Method Helper ---------------------------------------------------------------------
     private FunctionHelper functionHelper = new FunctionHelper();
-    private WaktuShalat prayers = new WaktuShalat();
+    private WaktuShalatHelper prayers = new WaktuShalatHelper();
     private Date now = new Date();
     private Calendar cal = Calendar.getInstance();
     // ---------------------------------------------------------------------------------------------
 
     // Deklarasi Requirement Kebutuhan -------------------------------------------------------------
-    private int jmlWaktuShubuh, jmlWaktuTerbit, jmlWaktuDzuhur, jmlWaktuAshar;
-    private int jmlWaktuMaghrib, jmlWaktuIsya, jmlBeMidnight, jmlAftMidnight;
+    private int jmlWaktuShubuh, jmlWaktuTerbit, jmlWaktuDzuhur,
+            jmlWaktuAshar, jmlWaktuMaghrib, jmlWaktuIsya, jmlBeMidnight, jmlAftMidnight;
     private int realTime;
     // ---------------------------------------------------------------------------------------------
 

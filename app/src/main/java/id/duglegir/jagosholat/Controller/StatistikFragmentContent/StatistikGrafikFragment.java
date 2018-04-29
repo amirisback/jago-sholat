@@ -1,5 +1,6 @@
 package id.duglegir.jagosholat.Controller.StatistikFragmentContent;
 
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,10 +17,11 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.Controller.ImportantMethod.FunctionHelper;
+import id.duglegir.jagosholat.Controller.ClassHelper.FunctionHelper;
+import id.duglegir.jagosholat.Model.DataContract.DataEntry;
 import id.duglegir.jagosholat.Model.DataOperation;
 import id.duglegir.jagosholat.R;
-import id.duglegir.jagosholat.View.MainActivityChild.StatistikFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.StatistikFragment;
 
 
 public class StatistikGrafikFragment extends Fragment {
@@ -29,10 +31,96 @@ public class StatistikGrafikFragment extends Fragment {
     // ---------------------------------------------------------------------------------------------
     private FunctionHelper functionHelper = new FunctionHelper();
     private DataOperation crud = new DataOperation();
+    private Cursor cursorTanggal, cursorCount;
+    private String [] days;
     // ---------------------------------------------------------------------------------------------
 
     public StatistikGrafikFragment() {
         // Required empty public constructor
+    }
+
+    public boolean isEmptyTanggal(){
+        try {
+            cursorTanggal = crud.getSemuaTanggal(getContext());
+            int cek = cursorTanggal.getCount();
+            return cek == 0;
+        } finally {
+            cursorTanggal.close();
+        }
+
+    }
+
+
+    public void CreateGrafik(){
+        // -----------------------------------------------------------------------------------------
+        mChart.setBorderColor(Color.GREEN);
+        mChart.setDragEnabled(true);
+        mChart.setScaleEnabled(false);
+        mChart.canScrollHorizontally(10);
+        // -----------------------------------------------------------------------------------------
+        ArrayList<Entry> yValues = new ArrayList<>();
+        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
+        // -----------------------------------------------------------------------------------------
+        if (!isEmptyTanggal()) {
+            try {
+                cursorTanggal = crud.getSemuaTanggal(getContext());
+                days = new String[cursorTanggal.getCount()];
+                float xData = 0;
+                int i = 0;
+                // ---------------------------------------------------------------------------------
+                while (cursorTanggal.moveToNext()){
+                    // -----------------------------------------------------------------------------
+                    int tanggalColumnIndex = cursorTanggal.getColumnIndex(DataEntry.COLUMN_TANGGAL); // Mencari index dalam database
+                    String tanggal = cursorTanggal.getString(tanggalColumnIndex); // Mendapat data dari database berdasarkan index
+                    // -----------------------------------------------------------------------------
+                    try {
+                        cursorCount = crud.getDataTanggal(getContext(), tanggal);
+                        int jumlahData = cursorCount.getCount();
+                        float yData  = (float) jumlahData * 2;
+                        // -------------------------------------------------------------------------
+                        yValues.add(new Entry(xData, yData)); // Posisi di grafik
+                    } finally {
+                        cursorCount.close();
+                    }
+                    // -----------------------------------------------------------------------------
+                    String noYears = tanggal.substring(0,tanggal.length()-5);
+                    days[i] = noYears;
+                    // -----------------------------------------------------------------------------
+                    xData++;
+                    i++;
+                }
+            } finally {
+                cursorTanggal.close();
+            }
+        } else {
+            yValues.add(new Entry(0, 0f));
+            yValues.add(new Entry(1, 0f));
+            yValues.add(new Entry(2, 0f));
+            yValues.add(new Entry(3, 0f));
+            yValues.add(new Entry(4, 0f));
+            yValues.add(new Entry(5, 0f));
+            yValues.add(new Entry(6, 0f));
+            days = new String[7];
+            for (int i = 0; i<days.length ; i++){
+                days[i] = "0";
+            }
+        }
+
+        LineDataSet mLineDataSet = new LineDataSet(yValues, "Grafik PerHari Tahun " + functionHelper.getSystemYear());
+        // -----------------------------------------------------------------------------------------
+        mLineDataSet.setFillAlpha(10);
+        mLineDataSet.setColor(Color.BLACK);
+        mLineDataSet.setLineWidth(3f);
+        mLineDataSet.setValueTextSize(10f);
+        mLineDataSet.setValueTextColor(Color.BLACK);
+        // -----------------------------------------------------------------------------------------
+        dataSets.add(mLineDataSet);
+        LineData data = new LineData(dataSets);
+        // -----------------------------------------------------------------------------------------
+        mChart.setData(data);
+        XAxis xAxis = mChart.getXAxis();
+        xAxis.setValueFormatter( new StatistikFragment.MyXAxisValueFormatter(days));
+
     }
 
     @Override
@@ -45,46 +133,10 @@ public class StatistikGrafikFragment extends Fragment {
         // -----------------------------------------------------------------------------------------
         mChart = (LineChart) rootView.findViewById(R.id.stat_chart);
         // -----------------------------------------------------------------------------------------
-        ShowChart();
+        CreateGrafik();
+        // -----------------------------------------------------------------------------------------
 
         return rootView;
     }
 
-    public void ShowChart(){
-        // -----------------------------------------------------------------------------------------
-        mChart.setDragEnabled(true);
-        mChart.setScaleEnabled(false);
-        // -----------------------------------------------------------------------------------------
-        ArrayList<Entry> yValues = new ArrayList<>();
-        // -----------------------------------------------------------------------------------------
-        yValues.add(new Entry(0,4f));
-        yValues.add(new Entry(1,10f));
-        yValues.add(new Entry(2,2f));
-        yValues.add(new Entry(3,5f));
-        yValues.add(new Entry(4,2f));
-        yValues.add(new Entry(5,1f));
-        yValues.add(new Entry(6,0f));
-        // -----------------------------------------------------------------------------------------
-        // -----------------------------------------------------------------------------------------
-        LineDataSet mLineDataSet = new LineDataSet(yValues, "Statistik");
-        // -----------------------------------------------------------------------------------------
-        mLineDataSet.setFillAlpha(50);
-        mLineDataSet.setColor(Color.BLACK);
-        mLineDataSet.setLineWidth(3f);
-        mLineDataSet.setValueTextSize(10f);
-        mLineDataSet.setValueTextColor(Color.BLACK);
-        mChart.setBorderColor(Color.GREEN);
-        // -----------------------------------------------------------------------------------------
-        // -----------------------------------------------------------------------------------------
-        ArrayList<ILineDataSet> dataSets = new ArrayList<>();
-        dataSets.add(mLineDataSet);
-        // -----------------------------------------------------------------------------------------
-        LineData data = new LineData(dataSets);
-        mChart.setData(data);
-        // -----------------------------------------------------------------------------------------
-        String[] months = new String[] {"Senin", "Selasa" ,"Rabu" , "Kamis" , "Jumat" , "Sabtu", "Minggu"};
-        XAxis xAxis = mChart.getXAxis();
-        xAxis.setValueFormatter( new StatistikFragment.MyXAxisValueFormatter(months));
-        // -----------------------------------------------------------------------------------------
-    }
 }

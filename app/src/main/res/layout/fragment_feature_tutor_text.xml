@@ -4,4 +4,4 @@
     android:id="@+id/listViewFeature"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureNiatFragment"/>
+    tools:context="id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureNiatFragment"/>

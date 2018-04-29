@@ -1,5 +1,4 @@
-package id.duglegir.jagosholat.View.FeatureFragmentChild;
-
+package id.duglegir.jagosholat.Controller.FeatureFragmentContent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,17 +11,19 @@ import com.github.chrisbanes.photoview.PhotoView;
 
 import id.duglegir.jagosholat.R;
 
-public class FeatureWudhuFragment extends Fragment {
+
+public class FeatureShalatFragment extends Fragment {
 
     // ---------------------------------------------------------------------------------------------
     private ImageView next, previous;
-    private String imageResId[] = {"wudhu_0","wudhu_1","wudhu_2","wudhu_3","wudhu_4","wudhu_5","wudhu_6","wudhu_7","wudhu_8","wudhu_9"};
+    private String imageResId[] = {"sholat_0","sholat_1","sholat_2","sholat_3","sholat_4","sholat_5","sholat_6","sholat_7","sholat_8","sholat_9","sholat_10"};
     private int imageRes, i=0;
     private PhotoView imageContain;
     // ---------------------------------------------------------------------------------------------
 
 
-    public FeatureWudhuFragment() {
+
+    public FeatureShalatFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +40,11 @@ public class FeatureWudhuFragment extends Fragment {
     }
 
     public void previousImage(){
-        if (!(i==0)) {
+        if (!(i == 0)) {
             i--;
             setImage(i);
+            next.setVisibility(View.VISIBLE);
         }
-
     }
 
     @Override
@@ -59,19 +60,19 @@ public class FeatureWudhuFragment extends Fragment {
         previous = rootView.findViewById(R.id.btn_image_previous);
         // -----------------------------------------------------------------------------------------
 
-        imageContain.setImageResource(R.drawable.wudhu_0);
+        imageContain.setImageResource(R.drawable.sholat_0);
         imageContain.setScaleType(ImageView.ScaleType.FIT_XY);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-            nextImage();
+            public void onClick(View v) {
+                nextImage();
             }
         });
         previous.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-            previousImage();
+            public void onClick(View v) {
+                previousImage();
             }
         });
 

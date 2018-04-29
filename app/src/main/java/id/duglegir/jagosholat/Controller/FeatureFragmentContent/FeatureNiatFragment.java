@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.FeatureFragmentChild;
+package id.duglegir.jagosholat.Controller.FeatureFragmentContent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,10 +9,10 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.Controller.ImportantMethod.QueryUtils;
+import id.duglegir.jagosholat.Controller.ClassHelper.JSONHelper;
+import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureAdapter.NiatShalatAdapter;
+import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.NiatShalat;
 import id.duglegir.jagosholat.R;
-import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureAdapter.NiatShalatAdapter;
-import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureObject.NiatShalat;
 
 
 public class FeatureNiatFragment extends Fragment {
@@ -28,7 +28,7 @@ public class FeatureNiatFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_feature_tutor_text, container, false);
 
         // -----------------------------------------------------------------------------------------
-        ArrayList<NiatShalat> arrayWords = QueryUtils.extractNiatShalat();
+        ArrayList<NiatShalat> arrayWords = JSONHelper.extractNiatShalat();
               // -----------------------------------------------------------------------------------------
 
         // -----------------------------------------------------------------------------------------

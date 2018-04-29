@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.MainActivityChild;
+package id.duglegir.jagosholat.Controller.MainActivityContent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

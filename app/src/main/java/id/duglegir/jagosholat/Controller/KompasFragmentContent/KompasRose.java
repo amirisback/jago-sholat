@@ -14,7 +14,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import id.duglegir.jagosholat.R;
-import id.duglegir.jagosholat.View.MainActivityChild.KompasFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.KompasFragment;
 
 
 public class KompasRose extends View {

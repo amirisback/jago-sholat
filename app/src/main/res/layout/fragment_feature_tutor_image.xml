@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureWudhuFragment">
+    tools:context="id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureWudhuFragment">
 
     <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/photo_view"

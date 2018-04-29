@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.FeatureFragmentChild;
+package id.duglegir.jagosholat.Controller.FeatureFragmentContent;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,10 +9,10 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.Controller.ImportantMethod.QueryUtils;
+import id.duglegir.jagosholat.Controller.ClassHelper.JSONHelper;
+import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureAdapter.DoaShalatAdapter;
+import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.DoaShalat;
 import id.duglegir.jagosholat.R;
-import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureAdapter.DoaShalatAdapter;
-import id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureObject.DoaShalat;
 
 public class FeatureDoaFragment extends Fragment {
 
@@ -28,7 +28,7 @@ public class FeatureDoaFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_feature_tutor_text, container, false);
 
         // -----------------------------------------------------------------------------------------
-        ArrayList<DoaShalat> arrayWords = QueryUtils.extractDoaShalat();
+        ArrayList<DoaShalat> arrayWords = JSONHelper.extractDoaShalat();
                 // -----------------------------------------------------------------------------------------
 
         // -----------------------------------------------------------------------------------------

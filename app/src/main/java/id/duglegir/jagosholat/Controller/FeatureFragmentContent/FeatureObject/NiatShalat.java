@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.FeatureFragmentChild.FeatureObject;
+package id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject;
 
 /**
  * Created by Bryan on 3/3/2018.

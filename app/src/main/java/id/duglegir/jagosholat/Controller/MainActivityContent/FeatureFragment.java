@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.MainActivityChild;
+package id.duglegir.jagosholat.Controller.MainActivityContent;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import id.duglegir.jagosholat.Controller.ViewPagerAdapter.FeaturePagerAdapter;
 import id.duglegir.jagosholat.R;
-import id.duglegir.jagosholat.View.ViewPagerController.FeaturePagerAdapter;
 
 public class FeatureFragment extends Fragment {
 

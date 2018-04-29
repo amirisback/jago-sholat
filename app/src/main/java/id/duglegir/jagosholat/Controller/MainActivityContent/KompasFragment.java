@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.View.MainActivityChild;
+package id.duglegir.jagosholat.Controller.MainActivityContent;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -60,7 +60,6 @@ public class KompasFragment extends Fragment implements SensorListener {
     private String location_string;
     private String add;
     private int Distance;
-    String result = "";
     // ---------------------------------------------------------------------------------------------
 
     public KompasFragment() {
