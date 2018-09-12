@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:orientation="vertical"
-        android:paddingVertical="@dimen/fab_margin">
+        android:layout_below="@id/layout_desc_jagosholat">
 
         <TextView
             android:layout_width="match_parent"
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginLeft="@dimen/fab_margin">
+            android:layout_marginLeft="@dimen/dimen_primary">
             <TextView
 
                 android:id="@+id/saran"

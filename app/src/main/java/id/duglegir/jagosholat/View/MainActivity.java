@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
     public void SlideView(){
 
         // -----------------------------------------------------------------------------------------
-        tab_layout = (TabLayout) findViewById(R.id.tablayout_main);
-        v_pager = (ViewPager)findViewById(R.id.viewpager_main);
+        tab_layout = (TabLayout) findViewById(R.id.tab_layout);
+        v_pager = (ViewPager)findViewById(R.id.viewpager);
         // -----------------------------------------------------------------------------------------
 
         // -----------------------------------------------------------------------------------------

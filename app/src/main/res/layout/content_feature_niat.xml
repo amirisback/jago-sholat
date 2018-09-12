@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:minHeight="50dp"
             android:background="@drawable/border_button"
-            android:paddingHorizontal="@dimen/fab_margin">
+            android:paddingHorizontal="@dimen/dimen_primary">
 
             <TextView
                 android:id="@+id/text_shalat"
@@ -52,13 +52,13 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/border_button"
         android:orientation="vertical"
-        android:padding="@dimen/fab_margin">
+        android:padding="@dimen/dimen_primary">
 
         <TextView
             android:id="@+id/text_arab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/dimen_primary"
             android:gravity="right"
             android:text="Arab"
             android:textColor="@color/textColorButton"
@@ -68,7 +68,7 @@
             android:id="@+id/text_latin_arab"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/dimen_primary"
             android:text="latin text"
             android:textSize="18sp"
             android:textColor="@color/textColorButton"

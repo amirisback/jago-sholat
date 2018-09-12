@@ -57,6 +57,7 @@ public class StatistikGrafikFragment extends Fragment {
         mChart.setDragEnabled(true);
         mChart.setScaleEnabled(false);
         mChart.canScrollHorizontally(10);
+        mChart.setDescription(null);
         // -----------------------------------------------------------------------------------------
         ArrayList<Entry> yValues = new ArrayList<>();
         ArrayList<ILineDataSet> dataSets = new ArrayList<>();
