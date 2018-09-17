@@ -38,7 +38,8 @@
         android:id="@+id/listViewStatistik"
         android:layout_width="match_parent"
         android:layout_below="@id/stat_progressBar"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/content_statistik_harian"/>
 
     <!-- Empty View -->
     <RelativeLayout

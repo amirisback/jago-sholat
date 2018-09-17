@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
+        tools:listitem="@layout/content_statistik_semua"
         android:layout_below="@id/list_title"/>
 
     <!-- Empty View -->

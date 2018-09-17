@@ -30,7 +30,8 @@ public class CatatanFragment extends Fragment {
     // ---------------------------------------------------------------------------------------------
     // Deklarasi Requirement Variable
     private String cekid;
-    private final String bukanWaktuSholat = "Belum Masuk Waktu Sholat";
+    private final String ISYA = "Shalat Isya";
+    private final String BUKAN_WAKTU_SHALAT = "Belum Masuk Waktu Sholat";
     private String[] mHadistArab = {"hadis_arab_0","hadis_arab_1","hadis_arab_2","hadis_arab_3","hadis_arab_4","hadis_arab_5"};
     private String[] mHadistText = {"hadis_text_0","hadis_text_1","hadis_text_2","hadis_text_3","hadis_text_4","hadis_text_5"};
     // ---------------------------------------------------------------------------------------------
@@ -91,16 +92,16 @@ public class CatatanFragment extends Fragment {
     public void addData(String mShalat) {
         try {
             if (isEmptyRowTable()) {
-                if (mShalat.equals(bukanWaktuSholat)) {
-                    Toast.makeText(getActivity(), bukanWaktuSholat, Toast.LENGTH_LONG).show();
+                if (mShalat.equals(BUKAN_WAKTU_SHALAT)) {
+                    Toast.makeText(getActivity(), BUKAN_WAKTU_SHALAT, Toast.LENGTH_LONG).show();
                 } else {
                     insertDataToDatabase();
                 }
             } else {
                 if (cekDataSudahAda().equals(mShalat)) {
                     Toast.makeText(getActivity(), "Data Sudah Tercatat", Toast.LENGTH_LONG).show();
-                } else if (mShalat.equals(bukanWaktuSholat)) {
-                    Toast.makeText(getActivity(), bukanWaktuSholat, Toast.LENGTH_LONG).show();
+                } else if (mShalat.equals(BUKAN_WAKTU_SHALAT)) {
+                    Toast.makeText(getActivity(), BUKAN_WAKTU_SHALAT, Toast.LENGTH_LONG).show();
                 } else {
                     insertDataToDatabase();
                 }
@@ -114,7 +115,7 @@ public class CatatanFragment extends Fragment {
     // ---------------------------------------------------------------------------------------------
     // Mengatur Tombol
     public void tampilanButtonSimpan(String mShalat){
-        if (mShalat.equalsIgnoreCase(bukanWaktuSholat)){
+        if (mShalat.equalsIgnoreCase(BUKAN_WAKTU_SHALAT)){
             btn_simpan.setVisibility(View.GONE);
         } else {
             if (isEmptyRowTable()){

@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureAdapter;
+package id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraAdapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.NiatShalat;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraObject.NiatShalat;
 import id.duglegir.jagosholat.R;
 
 /**
@@ -58,7 +58,7 @@ public class NiatShalatViewHolder extends RecyclerView.Adapter<NiatShalatViewHol
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_feature_niat, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_tatacara_text_niat, parent, false);
         NiatShalatViewHolder.MyViewHolder ViewHolder = new NiatShalatViewHolder.MyViewHolder(v);
 
         return ViewHolder;

@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import id.duglegir.jagosholat.Controller.MainActivityContent.JadwalFragment;
 import id.duglegir.jagosholat.Controller.MainActivityContent.CatatanFragment;
-import id.duglegir.jagosholat.Controller.MainActivityContent.FeatureFragment;
+import id.duglegir.jagosholat.Controller.MainActivityContent.TataCaraFragment;
 import id.duglegir.jagosholat.Controller.MainActivityContent.KompasFragment;
 import id.duglegir.jagosholat.Controller.MainActivityContent.StatistikFragment;
 
@@ -37,7 +37,7 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
             case 3 :
                 return new KompasFragment();
             case 4 :
-                return new FeatureFragment();
+                return new TataCaraFragment();
             default:
                 return null;
         }

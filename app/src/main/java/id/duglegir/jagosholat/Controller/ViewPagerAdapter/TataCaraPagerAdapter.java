@@ -4,21 +4,21 @@ import android.content.Context;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureDoaFragment;
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureNiatFragment;
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureShalatFragment;
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureWudhuFragment;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraDoaFragment;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraNiatFragment;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraShalatFragment;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraWudhuFragment;
 import id.duglegir.jagosholat.R;
 
 /**
  * Created by ikhsan ramadhan on 3/18/2018.
  */
 
-public class FeaturePagerAdapter extends FragmentPagerAdapter {
+public class TataCaraPagerAdapter extends FragmentPagerAdapter {
 
     private Context mContext;
 
-    public FeaturePagerAdapter(Context context, FragmentManager fm ) {
+    public TataCaraPagerAdapter(Context context, FragmentManager fm ) {
         super(fm);
         mContext = context;
     }
@@ -26,13 +26,13 @@ public class FeaturePagerAdapter extends FragmentPagerAdapter {
     public android.support.v4.app.Fragment getItem(int position) {
         switch (position){
             case 0 :
-                return new FeatureWudhuFragment();
+                return new TataCaraWudhuFragment();
             case 1 :
-                return new FeatureNiatFragment();
+                return new TataCaraNiatFragment();
             case 2 :
-                return new FeatureShalatFragment();
+                return new TataCaraShalatFragment();
             case 3 :
-                return new FeatureDoaFragment();
+                return new TataCaraDoaFragment();
             default:
                 return null;
         }

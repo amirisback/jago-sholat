@@ -4,5 +4,5 @@
     android:id="@+id/listViewFeature"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:listitem="@layout/content_feature_niat"
-    tools:context="id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureNiatFragment"/>
+    tools:listitem="@layout/content_tatacara_text_niat"
+    tools:context="id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraNiatFragment"/>

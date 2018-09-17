@@ -10,6 +10,7 @@ import android.widget.TextView;
 import id.duglegir.jagosholat.Controller.ClassHelper.FunctionHelper;
 import id.duglegir.jagosholat.Controller.ClassHelper.JadwalHelper;
 import id.duglegir.jagosholat.R;
+import id.duglegir.jagosholat.View.Notification;
 
 
 public class JadwalFragment extends Fragment {
@@ -17,14 +18,23 @@ public class JadwalFragment extends Fragment {
     // Deklarasi Class Helper ----------------------------------------------------------------------
     private JadwalHelper jadwalHelper = new JadwalHelper();
     private FunctionHelper functionHelper = new FunctionHelper();
+    private Notification notif = new Notification(getContext());
     // ---------------------------------------------------------------------------------------------
 
     // Deklarasi Requirement Variable --------------------------------------------------------------
     private int countTime;
+    private final String SHUBUH = "Shalat Shubuh";
+    private final String DZUHUR = "Shalat Dzuhur";
+    private final String ASHAR = "Shalat Ashar";
+    private final String MAGHRIB = "Shalat Maghrib";
+    private final String ISYA = "Shalat Isya";
+    private int jumlahDetikSaatIni = functionHelper.getSumWaktuDetik();
+    private int miliDetik = functionHelper.getDetikKeMiliDetik();
     // ---------------------------------------------------------------------------------------------
 
     // Deklarasi Element Layout XML ----------------------------------------------------------------
-    private TextView txt_coundown, txt_shalat, txt_waktu_shubuh, txt_waktu_dzuhur, txt_waktu_ashar, txt_waktu_maghrib, txt_waktu_isya;
+    private TextView txt_coundown, txt_shalat, txt_waktu_shubuh, txt_waktu_dzuhur, txt_waktu_ashar,
+            txt_waktu_maghrib, txt_waktu_isya;
     // ---------------------------------------------------------------------------------------------
 
     public JadwalFragment() {
@@ -32,24 +42,34 @@ public class JadwalFragment extends Fragment {
     }
 
     public void CekJadwal(){
-        if (jadwalHelper.getMJadwalShalat().equals("Shalat Shubuh")){
-            countTime = (jadwalHelper.getJmlWaktuDzuhur() - functionHelper.getSumWaktuDetik()) * functionHelper.getDetikKeMiliDetik();
-            txt_shalat.setText("Dzuhur");
-        } else if (jadwalHelper.getMJadwalShalat().equals("Shalat Dzuhur")){
-            countTime = (jadwalHelper.getJmlWaktuAshar() - functionHelper.getSumWaktuDetik()) * functionHelper.getDetikKeMiliDetik();
-            txt_shalat.setText("Ashar");
-        } else if (jadwalHelper.getMJadwalShalat().equals("Shalat Ashar")){
-            countTime = (jadwalHelper.getJmlWaktuMaghrib() - functionHelper.getSumWaktuDetik()) * functionHelper.getDetikKeMiliDetik();
-            txt_shalat.setText("Maghrib");
-        } else if (jadwalHelper.getMJadwalShalat().equals("Shalat Maghrib")){
-            countTime = (jadwalHelper.getJmlWaktuIsya() - functionHelper.getSumWaktuDetik()) * functionHelper.getDetikKeMiliDetik();
-            txt_shalat.setText("Isya");
-        } else if (jadwalHelper.getMJadwalShalat().equals("Shalat Isya")){
-            countTime = (jadwalHelper.getJmlWaktuShubuh() - functionHelper.getSumWaktuDetik()) * functionHelper.getDetikKeMiliDetik();
-            txt_shalat.setText("Shubuh");
+        if (jadwalHelper.getMJadwalShalat().equals(SHUBUH)){
+            txt_shalat.setText(DZUHUR.substring(7));
+            countTime = (jadwalHelper.getJmlWaktuDzuhur() - jumlahDetikSaatIni) * miliDetik;
+            
+        } else if (jadwalHelper.getMJadwalShalat().equals(DZUHUR)){
+            txt_shalat.setText(ASHAR.substring(7));
+            countTime = (jadwalHelper.getJmlWaktuAshar() - jumlahDetikSaatIni) * miliDetik;
+            
+        } else if (jadwalHelper.getMJadwalShalat().equals(ASHAR)){
+            txt_shalat.setText(MAGHRIB.substring(7));
+            countTime = (jadwalHelper.getJmlWaktuMaghrib() - jumlahDetikSaatIni) * miliDetik;
+            
+        } else if (jadwalHelper.getMJadwalShalat().equals(MAGHRIB)){
+            txt_shalat.setText(ISYA.substring(7));
+            countTime = (jadwalHelper.getJmlWaktuIsya() - jumlahDetikSaatIni) * miliDetik;
+            
+        } else if (jadwalHelper.getMJadwalShalat().equals(ISYA)){
+            txt_shalat.setText(SHUBUH.substring(7));
+            if ((jumlahDetikSaatIni == jadwalHelper.getJmlAftMidnight()) || (jumlahDetikSaatIni < jadwalHelper.getJmlWaktuShubuh())) {
+                countTime = (jadwalHelper.getJmlWaktuShubuh() - jumlahDetikSaatIni) * miliDetik;
+            } else if ((jumlahDetikSaatIni == jadwalHelper.getJmlWaktuIsya()) || (jumlahDetikSaatIni <= jadwalHelper.getJmlBeMidnight())) {
+                countTime =  (jadwalHelper.getJmlWaktuShubuh() + jadwalHelper.getJmlBeMidnight() - jumlahDetikSaatIni) * miliDetik;
+            }
+
         } else {
-            countTime = (jadwalHelper.getJmlWaktuDzuhur() - functionHelper.getSumWaktuDetik()) * functionHelper.getDetikKeMiliDetik();
-            txt_shalat.setText("Dzuhur");
+            txt_shalat.setText(DZUHUR.substring(7));
+            countTime = (jadwalHelper.getJmlWaktuDzuhur() - jumlahDetikSaatIni) * miliDetik;
+            
         }
     }
 

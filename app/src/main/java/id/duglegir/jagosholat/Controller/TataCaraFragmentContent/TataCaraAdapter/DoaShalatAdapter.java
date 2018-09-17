@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureAdapter;
+package id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraAdapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import id.duglegir.jagosholat.R;
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.DoaShalat;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraObject.DoaShalat;
 
 /**
  * Created by Bryan on 3/12/2018.
@@ -28,7 +28,7 @@ public class DoaShalatAdapter extends ArrayAdapter<DoaShalat> {
         View listItemView = convertView;
 
         if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.content_feature_doa, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.content_tatacara_text_doa, parent, false);
         }
 
         DoaShalat doaShalat = getItem(position);

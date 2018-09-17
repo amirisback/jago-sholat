@@ -5,8 +5,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.DoaShalat;
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.NiatShalat;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraObject.DoaShalat;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraObject.NiatShalat;
 
 public class JSONHelper {
 

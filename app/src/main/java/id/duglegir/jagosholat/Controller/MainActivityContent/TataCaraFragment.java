@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import id.duglegir.jagosholat.Controller.ViewPagerAdapter.FeaturePagerAdapter;
+import id.duglegir.jagosholat.Controller.ViewPagerAdapter.TataCaraPagerAdapter;
 import id.duglegir.jagosholat.R;
 
-public class FeatureFragment extends Fragment {
+public class TataCaraFragment extends Fragment {
 
-    public FeatureFragment() {
+    public TataCaraFragment() {
         // Required empty public constructor
     }
 
@@ -21,7 +21,7 @@ public class FeatureFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_feature, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_tatacara, container, false);
 
         // -----------------------------------------------------------------------------------------
         // Deklarasi Element XML
@@ -31,8 +31,8 @@ public class FeatureFragment extends Fragment {
 
         // -----------------------------------------------------------------------------------------
         // Membuat ViewPager (SLIDER)
-        FeaturePagerAdapter featurePagerAdapter = new FeaturePagerAdapter(getActivity(),getFragmentManager());
-        viewPager.setAdapter(featurePagerAdapter);
+        TataCaraPagerAdapter tataCaraPagerAdapter = new TataCaraPagerAdapter(getActivity(),getFragmentManager());
+        viewPager.setAdapter(tataCaraPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         // -----------------------------------------------------------------------------------------
 

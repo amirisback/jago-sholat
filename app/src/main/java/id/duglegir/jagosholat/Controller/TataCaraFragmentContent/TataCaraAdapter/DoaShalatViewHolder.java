@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureAdapter;
+package id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraAdapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject.DoaShalat;
+import id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraObject.DoaShalat;
 import id.duglegir.jagosholat.R;
 
 /**
@@ -56,7 +56,7 @@ public class DoaShalatViewHolder extends RecyclerView.Adapter<DoaShalatViewHolde
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_feature_doa, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_tatacara_text_doa, parent, false);
         DoaShalatViewHolder.ViewHolder ViewHolder = new DoaShalatViewHolder.ViewHolder(v);
 
         return ViewHolder;

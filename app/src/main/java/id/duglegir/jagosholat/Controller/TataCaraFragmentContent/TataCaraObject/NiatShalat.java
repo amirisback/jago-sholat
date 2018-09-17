@@ -1,4 +1,4 @@
-package id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureObject;
+package id.duglegir.jagosholat.Controller.TataCaraFragmentContent.TataCaraObject;
 
 /**
  * Created by Bryan on 3/3/2018.

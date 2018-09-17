@@ -1,0 +1,56 @@
+<!--<RelativeLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="id.duglegir.jagosholat.Controller.FeatureFragmentContent.TataCaraWudhuFragment">-->
+
+    <!--<com.github.chrisbanes.photoview.PhotoView-->
+        <!--android:id="@+id/photo_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--tools:src="@drawable/sholat_0"/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/btn_image_next"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:src="@drawable/ic_chevron_right_black_24dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerInParent="true"/>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/btn_image_previous"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:src="@drawable/ic_chevron_left_black_24dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_centerInParent="true"/>-->
+
+<!--</RelativeLayout>-->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/activity_main"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<android.support.v4.view.ViewPager
+    android:id="@+id/SliderImage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+<LinearLayout
+    android:id="@+id/SliderDots"
+    android:layout_marginTop="@dimen/dimen_primary"
+    android:orientation="horizontal"
+    android:gravity="center_vertical|center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</LinearLayout>
+
+
+</RelativeLayout>

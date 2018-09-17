@@ -65,7 +65,7 @@
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tab_layout"
-            app:tabMode="scrollable"
+            app:tabMode="fixed"
             android:layout_below="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
             app:elevation="0dp"
             app:tabTextColor="#d3d3d3"
             app:tabSelectedTextColor="#ffffff"
-            app:tabIndicatorColor="#FFFFFF"
+            app:tabIndicatorColor="@color/colorAccent"
             android:minHeight="?attr/actionBarSize"
             />
 
