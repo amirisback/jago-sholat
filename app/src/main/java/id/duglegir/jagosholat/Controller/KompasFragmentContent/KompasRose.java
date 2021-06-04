@@ -28,8 +28,8 @@ public class KompasRose extends View {
     private float centre_y = height * 0.5f;
     // ---------------------------------------------------------------------------------------------
     private Matrix rotateNeedle = new Matrix();
-    private Bitmap compassBackground;
-    private Bitmap compassNeedle;
+    private Bitmap compassBackground = BitmapFactory.decodeResource(getResources(), R.drawable.kompas_back);
+    private Bitmap compassNeedle = BitmapFactory.decodeResource(getResources(), R.drawable.kompas_front);
     // ---------------------------------------------------------------------------------------------
 
     public KompasRose(Context context) {
@@ -51,10 +51,6 @@ public class KompasRose extends View {
     }
     private void initCompassView() {
 
-        // -----------------------------------------------------------------------------------------
-        // Membuat Kompas
-        compassNeedle = BitmapFactory.decodeResource(getResources(), R.drawable.kompas_front);
-        compassBackground = BitmapFactory.decodeResource(getResources(), R.drawable.kompas_back);
         // -----------------------------------------------------------------------------------------
         width = compassBackground.getWidth()*2;
         height = compassBackground.getHeight()*2;

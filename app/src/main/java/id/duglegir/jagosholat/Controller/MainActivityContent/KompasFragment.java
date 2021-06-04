@@ -9,7 +9,9 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +54,7 @@ public class KompasFragment extends Fragment implements SensorListener {
     private SensorManager sensorManager;
     private static final int sensor = SensorManager.SENSOR_ORIENTATION;
     // ---------------------------------------------------------------------------------------------
-    private double latitude,longitude;
+    private double latitude, longitude;
     private double Qlati = 21.42243;
     private double Qlongi = 39.82624;
     public static double degree;
@@ -74,9 +76,9 @@ public class KompasFragment extends Fragment implements SensorListener {
 
         // -----------------------------------------------------------------------------------------
         context = getActivity();
-        direcCantainer = (RelativeLayout)rootView.findViewById(R.id.container_layout);
+        direcCantainer = (RelativeLayout) rootView.findViewById(R.id.container_layout);
         kompasRose = new KompasRose(context);
-        sensorManager = (SensorManager)getContext().getSystemService(context.SENSOR_SERVICE);
+        sensorManager = (SensorManager) getContext().getSystemService(context.SENSOR_SERVICE);
         AsyncCallWS2 task = new AsyncCallWS2();
         // -----------------------------------------------------------------------------------------
         IntializeView(rootView);
@@ -183,26 +185,26 @@ public class KompasFragment extends Fragment implements SensorListener {
 
 
     private void IntializeView(View root) {
-        CountryName = (TextView)root.findViewById(R.id.idTvCountryName);
+        CountryName = (TextView) root.findViewById(R.id.idTvCountryName);
     }
 
-    protected double bearing(double startLat, double startLng, double endLat, double endLng){
+    protected double bearing(double startLat, double startLng, double endLat, double endLng) {
         double longitude1 = startLng;
         double longitude2 = endLng;
         double latitude1 = Math.toRadians(startLat);
         double latitude2 = Math.toRadians(endLat);
-        double longDiff= Math.toRadians(longitude2 - longitude1);
-        double y = Math.sin(longDiff)* Math.cos(latitude2);
-        double x = Math.cos(latitude1)* Math.sin(latitude2)- Math.sin(latitude1)* Math.cos(latitude2)* Math.cos(longDiff);
+        double longDiff = Math.toRadians(longitude2 - longitude1);
+        double y = Math.sin(longDiff) * Math.cos(latitude2);
+        double x = Math.cos(latitude1) * Math.sin(latitude2) - Math.sin(latitude1) * Math.cos(latitude2) * Math.cos(longDiff);
 
-        return (Math.toDegrees(Math.atan2(y, x))+360)%360;
+        return (Math.toDegrees(Math.atan2(y, x)) + 360) % 360;
     }
 
     public void getAddress(double lat, double lng) {
         Geocoder geocoder = new Geocoder(context, Locale.getDefault());
         try {
             List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
-            Address obj = addresses.get (0);
+            Address obj = addresses.get(0);
 
             add = obj.getLocality();
             add = add + ", " + obj.getCountryName();
@@ -213,9 +215,7 @@ public class KompasFragment extends Fragment implements SensorListener {
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(context, "You have no Internet connection", Toast.LENGTH_SHORT).show();
-        }
-
-        catch(IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             e.printStackTrace();
             Toast.makeText(context, "You have no Internet connection", Toast.LENGTH_SHORT).show();
         }

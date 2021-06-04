@@ -1,8 +1,10 @@
 package id.duglegir.jagosholat.Controller.ViewPagerAdapter;
 
 import android.content.Context;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureDoaFragment;
 import id.duglegir.jagosholat.Controller.FeatureFragmentContent.FeatureNiatFragment;
@@ -23,7 +25,7 @@ public class FeaturePagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
     @Override
-    public android.support.v4.app.Fragment getItem(int position) {
+    public Fragment getItem(int position) {
         switch (position){
             case 0 :
                 return new FeatureWudhuFragment();
