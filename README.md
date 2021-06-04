@@ -25,7 +25,7 @@ Jago Sholat adalah aplikasi berbasis android yang di khususkan untuk pencatatan 
 
 | UI 7 | UI 8 | UI 9 |
 |:----:|:----:|:----:|
-|<span align="center"><img width="200px" height="360px" src="docs/image/ss_1.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_2.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_2.png"></span> |
+|<span align="center"><img width="200px" height="360px" src="docs/image/ss_1.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_2.png"></span> | <span align="center"><img width="200px" height="360px" src="docs/image/ss_3.png"></span> |
 
 
 ## Version Release
