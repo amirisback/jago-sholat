@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/dimen_primary"
-    tools:context="id.duglegir.jagosholat.Controller.MainActivityContent.KompasFragment">
+    tools:context="id.duglegir.jagosholat.ui.compass.KompasFragment">
 
     <LinearLayout
         android:layout_width="fill_parent"

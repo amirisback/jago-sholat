@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Background_SplashScreen"
-    tools:context="id.duglegir.jagosholat.View.SplashScreenActivity">
+    tools:context="id.duglegir.jagosholat.ui.main.SplashScreenActivity">
 
     <ImageView
         android:layout_width="400px"

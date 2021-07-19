@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="id.duglegir.jagosholat.Controller.StatistikFragmentContent.StatistikSemuaFragment">
+    tools:context="id.duglegir.jagosholat.ui.statistic.StatistikSemuaFragment">
 
     <LinearLayout
         android:id="@+id/list_title"
