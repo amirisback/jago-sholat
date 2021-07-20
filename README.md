@@ -6,6 +6,8 @@ Jago Sholat, Aplikasi pencatatan shalat
 ## Description
 Jago Sholat adalah aplikasi berbasis android yang di khususkan untuk pencatatan sholat. Di dalam aplikasi terdapat fitur-fitur yang dapat membantu anda dalam melaksanakan ibadah, seperti misalkan fitur pencatatan ibadah , lalu fitur jadwal ibadah berdasarkan tempat masing-masing, lalu terdapat fitur statistik ibadah yang merupakan hasil dari pencatatan ibadah, lalu ada fitur kompas yang membantu anda dalam melihat arah qiblat dari daerah anda dengan bantuan dari GPS, lalu terdapat fitur tata cara, yang mana didalamnya tersebut terdapat fitur lagi yaitu tata cara sholat yang membantu anda dalam mengetahui gerakan sholat sesuai dengan sunnah nabi, lalu tata cara wudhu, doa-doa sholat, dan juga niat sholat.
 
+![ScreenShoot Apps](docs/image/mad_score.png?raw=true)
+
 ## Feature
 - Pencacatan Ibadah Shalat
 - Tampilan Jadwal Shalat
