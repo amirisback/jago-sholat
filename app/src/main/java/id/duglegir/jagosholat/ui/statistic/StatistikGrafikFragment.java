@@ -118,7 +118,7 @@ public class StatistikGrafikFragment extends Fragment {
         // -----------------------------------------------------------------------------------------
         mChart.setData(data);
         XAxis xAxis = mChart.getXAxis();
-        xAxis.setValueFormatter( new StatistikFragment.MyXAxisValueFormatter(days));
+        xAxis.setValueFormatter(new StatistikFragment.MyXAxisValueFormatter(days));
 
     }
 

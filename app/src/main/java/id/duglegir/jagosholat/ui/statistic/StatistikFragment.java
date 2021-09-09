@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 
 import id.duglegir.jagosholat.ui.statistic.StatistikGrafikFragment;
 import id.duglegir.jagosholat.ui.statistic.StatistikHarianFragment;
@@ -84,7 +85,7 @@ public class StatistikFragment extends Fragment {
     }
     // ---------------------------------------------------------------------------------------------
 
-    public static class MyXAxisValueFormatter implements IAxisValueFormatter {
+    public static class MyXAxisValueFormatter extends ValueFormatter implements IAxisValueFormatter {
         private String[] mValues;
         public MyXAxisValueFormatter(String[] values) {
             this.mValues = values;
